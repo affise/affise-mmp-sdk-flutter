@@ -4,6 +4,7 @@ abstract class AffiseAttributionModulesApi {
   AffiseModuleAppsFlyerApi get appsFlyer;
   AffiseModuleLinkApi get link;
   AffiseModuleSubscriptionApi get subscription;
+  AffiseModuleTikTokApi get tikTok;
 
   getStatus(AffiseModules module, OnKeyValueCallback callback);
 

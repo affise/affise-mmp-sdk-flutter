@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void initAffise() async {
-    // Initialize https://github.com/affise/flutter-sdk#initialize
+    // Initialize https://github.com/affise/affise-mmp-sdk-flutter#initialize
     Affise
         .settings(
           affiseAppId: "129", //Change to your app id
@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
         .setProduction(false) //To enable debug methods set Production to false
         .start(); // Start Affise SDK
 
-    // Deeplinks https://github.com/affise/flutter-sdk#deeplinks
+    // Deeplinks https://github.com/affise/affise-mmp-sdk-flutter#deeplinks
     Affise.registerDeeplinkCallback((value) {
       setOutput("Deeplink: $value");
       alert(
@@ -75,7 +75,7 @@ class _MyAppState extends State<MyApp> {
       }
     });
 
-    // SDK to SDK integrations https://github.com/affise/flutter-sdk#sdk-to-sdk-integrations
+    // SDK to SDK integrations https://github.com/affise/affise-mmp-sdk-flutter#sdk-to-sdk-integrations
     // AffiseAdRevenue(AffiseAdSource.ADMOB)
     //   .setRevenue(2.5, "USD")
     //   .setNetwork("network")

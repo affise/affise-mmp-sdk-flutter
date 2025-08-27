@@ -65,7 +65,7 @@ flutter {
     source '../..'
 }
 
-final affise_version = '1.6.61'
+final affise_version = '1.6.64'
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -82,4 +82,5 @@ dependencies {
     implementation "com.affise:module-appsflyer:$affise_version"
     // implementation "com.affise:module-rustore:$affise_version"
     // implementation "com.affise:module-huawei:$affise_version"
+    implementation "com.affise:module-tiktok:$affise_version"
 }

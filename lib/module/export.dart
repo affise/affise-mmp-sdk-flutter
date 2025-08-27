@@ -7,3 +7,4 @@ export 'link/affise_link_callback.dart';
 export 'link/affise_module_link_api.dart';
 export 'subscription/export.dart';
 export 'appsflyer/affise_module_appsflyer_api.dart';
+export 'tiktok/affise_module_tiktok_api.dart';

@@ -13,7 +13,7 @@ abstract class AffiseAppsFlyer implements AffiseModuleAppsFlyerApi {
   @override
   void logEvent(String eventName, Map<String, dynamic> eventValues) {
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      _native.logEvent(eventName, eventValues);
+      _native.appsFlyerLogEvent(eventName, eventValues);
     });
   }
 

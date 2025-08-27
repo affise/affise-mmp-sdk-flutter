@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:affise_attribution_lib/module/tiktok/affise_tiktok.dart';
 import 'package:flutter/scheduler.dart';
 import '../../affise.dart';
 import '../../native/affise_native.dart';
@@ -21,10 +22,14 @@ abstract class AffiseAttributionModules implements AffiseAttributionModulesApi {
   @override
   final AffiseModuleSubscriptionApi subscription;
 
+  @override
+  final AffiseModuleTikTokApi tikTok;
+
   AffiseAttributionModules(this._native) :
         appsFlyer = _AffiseModuleAppsFlyer(_native),
         link = _AffiseModuleLink(_native),
-        subscription = _AffiseModuleSubscription(_native);
+        subscription = _AffiseModuleSubscription(_native),
+        tikTok = _AffiseModuleTikTok(_native);
 
   /// Get module status
   @override
@@ -101,4 +106,8 @@ class _AffiseModuleLink extends AffiseLink {
 
 class _AffiseModuleSubscription extends AffiseSubscription {
   _AffiseModuleSubscription(super.native);
+}
+
+class _AffiseModuleTikTok extends AffiseTikTok {
+  _AffiseModuleTikTok(super.native);
 }

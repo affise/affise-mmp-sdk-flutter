@@ -280,13 +280,23 @@ class AffiseNative extends NativeBase {
     );
   }
 
-  // AppsFlyer
-  logEvent(String eventName, Map<String, dynamic> eventValues) {
+  // AppsFlyer Module
+  appsFlyerLogEvent(String eventName, Map<String, dynamic> eventValues) {
     final Map<String, dynamic> data = {
       DataName.EVENT_NAME: eventName,
       DataName.EVENT_VALUES: eventValues,
     };
     native(AffiseApiMethod.MODULE_APPSFLYER_LOG_EVENT, data);
+  }
+
+  // TikTok Module
+  tikTokSendEvent(String eventName, Map<String, dynamic> properties, String eventId) {
+    final Map<String, dynamic> data = {
+      DataName.EVENT_NAME: eventName,
+      DataName.EVENT_VALUES: properties,
+      DataName.EVENT_ID: eventId,
+    };
+    native(AffiseApiMethod.MODULE_TIKTOK_EVENT, data);
   }
   ////////////////////////////////////////
   // modules

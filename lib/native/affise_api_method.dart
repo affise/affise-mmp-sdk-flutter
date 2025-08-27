@@ -51,6 +51,8 @@ enum AffiseApiMethod {
   // Subscription Module
   MODULE_SUBS_FETCH_PRODUCTS_CALLBACK,
   MODULE_SUBS_PURCHASE_CALLBACK,
+  // TikTok Module
+  MODULE_TIKTOK_EVENT,
   ////////////////////////////////////////
   // modules
   ////////////////////////////////////////
@@ -153,6 +155,9 @@ extension AffiseApiMethodExt on AffiseApiMethod {
         return "module_subs_fetch_products_callback";
       case AffiseApiMethod.MODULE_SUBS_PURCHASE_CALLBACK:
         return "module_subs_purchase_callback";
+      // TikTok Module
+      case AffiseApiMethod.MODULE_TIKTOK_EVENT:
+        return "module_tiktok_event";
       ////////////////////////////////////////
       // modules
       ////////////////////////////////////////

@@ -4,7 +4,7 @@
 
 | Package                  |                         Version                          |
 |--------------------------|:--------------------------------------------------------:|
-| `affise_attribution_lib` | [`1.6.39`](https://github.com/affise/sdk-react/releases) |
+| `affise_attribution_lib` | [`1.6.40`](https://github.com/affise/sdk-react/releases) |
 
 - [Affise Attribution Flutter Library](#affise-attribution-flutter-library)
 - [Description](#description)
@@ -24,6 +24,7 @@
       - [Module Status](#module-status)
       - [Module Subscription](#module-subscription)
         - [AffiseProductType](#affiseproducttype)
+      - [Module TikTok](#module-tiktok)
     - [Initialize](#initialize)
       - [Before application is published](#before-application-is-published)
       - [Domain](#domain)
@@ -108,7 +109,7 @@ referrer.
 
 ### Integrate as dependency
 
-Add [git](https://github.com/affise/flutter-sdk) dependency to `pubspec.yaml` in your flutter application
+Add [git](https://github.com/affise/affise-mmp-sdk-flutter) dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
@@ -117,7 +118,7 @@ dependencies:
 
   affise_attribution_lib:
     git:
-      url: https://github.com/affise/flutter-sdk
+      url: https://github.com/affise/affise-mmp-sdk-flutter
 ```
 
 ### Modules
@@ -151,11 +152,12 @@ Add modules to android project
 | `RUSTORE`      | [![module-rustore](https://img.shields.io/maven-central/v/com.affise/module-rustore?label=latest)](https://mvnrepository.com/artifact/com.affise/module-rustore)             | `Auto` |
 | `HUAWEI`       | [![module-rustore](https://img.shields.io/maven-central/v/com.affise/module-huawei?label=latest)](https://mvnrepository.com/artifact/com.affise/module-huawei)               | `Auto` |
 | `META`         | [![module-meta](https://img.shields.io/maven-central/v/com.affise/module-meta?label=latest)](https://mvnrepository.com/artifact/com.affise/module-meta)                      | `Auto` |
+| `TIKTOK`         | [![module-tiktok](https://img.shields.io/maven-central/v/com.affise/module-tiktok?label=latest)](https://mvnrepository.com/artifact/com.affise/module-tiktok)                      | `Auto` |
 
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.6.61'
+final affise_version = '1.6.64'
 
 dependencies {
     // Affise modules
@@ -165,11 +167,12 @@ dependencies {
     implementation "com.affise:module-network:$affise_version"
     implementation "com.affise:module-phone:$affise_version"
     implementation "com.affise:module-status:$affise_version"
-    implementation "com.affise:module-subscription:$affise_version"
-    implementation "com.affise:module-meta:$affise_version"
-    implementation "com.affise:module-rustore:$affise_version"
-    implementation "com.affise:module-huawei:$affise_version"
-    implementation "com.affise:module-appsflyer:$affise_version"
+//    implementation "com.affise:module-subscription:$affise_version"
+//    implementation "com.affise:module-meta:$affise_version"
+//    implementation "com.affise:module-rustore:$affise_version"
+//    implementation "com.affise:module-huawei:$affise_version"
+//    implementation "com.affise:module-appsflyer:$affise_version"
+//    implementation "com.affise:module-tiktok:$affise_version"
 }
 ```
 
@@ -179,13 +182,14 @@ Add modules to iOS project
 
 | Module         |                                       Version                                        | Start    |
 |----------------|:------------------------------------------------------------------------------------:|----------|
-| `ADSERVICE`    | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `ADVERTISING`  | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Manual` |
-| `APPSFLYER`    | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `LINK`         | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `PERSISTENT`   | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `STATUS`       | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
-| `SUBSCRIPTION` | [`1.6.53`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `ADSERVICE`    | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `ADVERTISING`  | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Manual` |
+| `APPSFLYER`    | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `LINK`         | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `PERSISTENT`   | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `STATUS`       | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `SUBSCRIPTION` | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
+| `TIKTOK`       | [`1.6.54`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) | `Auto`   |
 
 Example [example/ios/Podfile](example/ios/Podfile)
 
@@ -193,17 +197,18 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.6.53'
+  affise_version = '1.6.54'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules
   pod 'AffiseModule/AdService', affise_version
   pod 'AffiseModule/Advertising', affise_version
-  pod 'AffiseModule/AppsFlyer', affise_version
   pod 'AffiseModule/Link', affise_version
   pod 'AffiseModule/Persistent', affise_version
   pod 'AffiseModule/Status', affise_version
-  pod 'AffiseModule/Subscription', affise_version
+#  pod 'AffiseModule/Subscription', affise_version
+#  pod 'AffiseModule/AppsFlyer', affise_version
+#  pod 'AffiseModule/TikTok', affise_version
 end
 ```
 
@@ -219,7 +224,7 @@ Sends `attributionToken` from `AdServices` framework `AAAttribution.attributionT
 
 This module required to Use [`IDFA`](https://developer.apple.com/documentation/adsupport/asidentifiermanager/advertisingidentifier) (Identifier for advertisers)
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -260,7 +265,7 @@ Affise.module.appsFlyer.hasModule().then((hasModule) => {
 
 #### Module Huawei
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -382,6 +387,52 @@ Affise.module.subscription.hasModule().then((hasModule) => {
 - `RENEWABLE_SUBSCRIPTION`
 - `NON_RENEWABLE_SUBSCRIPTION`
 
+
+#### Module TikTok
+
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> There are no official flutter TikTok package.
+> 
+> You have to add native dependency manually.
+> 
+> Add the Android TikTok SDK dependency [TikTok Docs](https://business-api.tiktok.com/gateway/docs/index?identify_key=c0138ffadd90a955c1f0670a56fe348d1d40680b3c89461e09f78ed26785164b&language=ENGLISH&doc_id=1739585434183746#item-link-1.%20Add%20the%20SDK%20as%20a%20build%20dependency)
+>
+> Add the iOS TikTok SDK dependency [TikTok Docs](https://business-api.tiktok.com/gateway/docs/index?identify_key=c0138ffadd90a955c1f0670a56fe348d1d40680b3c89461e09f78ed26785164b&language=ENGLISH&doc_id=1739585432134657#item-link-1.%20Add%20the%20SDK%20as%20a%20build%20dependency)
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
+```dart
+final String eventName = "AddToCart";
+final String eventId = "eventId";
+
+final Map<String, dynamic> properties = {
+  "currency": "USD",
+  "value": 4.99,
+  "contents": [
+    {
+      "price": "4.99",
+      "quantity": "1",
+      "content_name": "Name of the product",
+      "brand": "Brand of the product",
+    },
+  ],
+};
+
+// Send TikTok data to Affise
+Affise.module.tikTok.sendEvent(eventName, properties, eventId);
+```
+
+Is Module present:
+
+```dart
+Affise.module.tikTok.hasModule().then((hasModule) => {
+  // Check is module present
+});
+```
+
 ### Initialize
 
 After dependency is added, sync project with `flutter pub get` and initialize.
@@ -423,7 +474,7 @@ Affise
 
 #### Before application is published
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -921,7 +972,7 @@ but if there is no network connection or device is disabled, events are kept loc
 
 ## Advertising Identifier (google) tracking
 
-> **Note**
+> [!NOTE] 
 >
 > Requires [Affise Advertising Module](#modules)
 
@@ -929,7 +980,7 @@ Advertising Identifier (google) tracking is supported automatically, no actions 
 
 ## Open Advertising Identifier (huawei) tracking
 
-> **Note**
+> [!NOTE] 
 >
 > Requires [Affise Huawei Module](#modules)
 
@@ -1066,7 +1117,7 @@ To use this feature, create file with name `partner_key` in your app assets dire
 
 ### Deeplinks
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -1169,7 +1220,7 @@ Example: `myapp://mydomain.com`
 
 ### AppLinks
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
@@ -1237,7 +1288,7 @@ Example: `https://mydomain.com`
   5. Once Android Studio generates the file, click **Save file** to download it.
   6. Upload the `assetlinks.json` file to your site, with read access for everyone, at `https://yoursite/.well-known/assetlinks.json`.
 
-  > **Important**
+  > [!IMPORTANT]
   >
   > The system verifies the Digital Asset Links file via the encrypted HTTPS protocol. Make sure that the **assetlinks.json** file is accessible over an HTTPS connection, regardless of whether your app's intent filter includes **https**.
 
@@ -1274,7 +1325,7 @@ Example: `https://mydomain.com`
 
 ### Get deferred deeplink
 
-> **Note**
+> [!NOTE] 
 >
 > Requires [Affise Status Module](#modules)
 
@@ -1288,7 +1339,7 @@ Affise.getDeferredDeeplink((deferredDeeplink) {
 
 ### Get deferred deeplink value
 
-> **Note**
+> [!NOTE] 
 >
 > Requires [Affise Status Module](#modules)
 
@@ -1369,7 +1420,7 @@ Affise.getRandomUserId();
 
 ## Get random device Id
 
-> **Note**
+> [!NOTE] 
 >
 > To make `device id` more persistent on application reinstall
 >
@@ -1554,7 +1605,7 @@ AffiseAdRevenue(AffiseAdSource.ADMOB)
 
 ## Validate credentials
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 > 
@@ -1607,7 +1658,7 @@ Affise.debug.versionNative().then((version) {
 
 ## iOS
 
-> **Warning**
+> [!CAUTION]
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 >
