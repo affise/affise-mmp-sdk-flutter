@@ -163,12 +163,6 @@ class Affise {
     Affise.module.getStatus(module, callback);
   }
 
-  /// Manual module start
-  @Deprecated('Use `Affise.module.moduleStart` instead')
-  static Future<bool> moduleStart(AffiseModules module) async {
-    return Affise.module.moduleStart(module);
-  }
-
   /// Get installed modules
   @Deprecated('Use `Affise.module.getModulesInstalled` instead')
   static Future<List<AffiseModules>> getModulesInstalled() async {

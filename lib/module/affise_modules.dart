@@ -56,3 +56,9 @@ extension AffiseModulesExt on AffiseModules {
     }
   }
 }
+
+extension AffiseModulesListExt on List<AffiseModules> {
+  List<String> get toStringList {
+    return map((e) => e.value).toList();
+  }
+}

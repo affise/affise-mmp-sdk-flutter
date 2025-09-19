@@ -15,7 +15,8 @@ class AffiseSettings {
   // bool _enabledMetrics = false;
   OnInitSuccessHandler? _onInitSuccessHandler;
   OnInitErrorHandler? _onInitErrorHandler;
-  Map<String, dynamic> _configValues = {};
+  Map<AffiseConfig, dynamic> _configValues = {};
+  List<AffiseModules> _disableModules = [];
 
   /// Affise SDK settings
   /// [affiseAppId] - your app id
@@ -78,16 +79,22 @@ class AffiseSettings {
   
   /// Set configValues
   AffiseSettings setConfigValue(AffiseConfig key, dynamic value) {
-    _configValues[key.value] = value;
+    _configValues[key] = value;
     return this;
   }
   
   /// Set configValue
   AffiseSettings setConfigValues(Map<AffiseConfig, dynamic> values) {
     values.forEach((key, value) {
-      _configValues[key.value] = value;
+      _configValues[key] = value;
     });
     return this;
+  }
+      
+  /// Set disableModules
+  AffiseSettings setDisableModules(List<AffiseModules> disableModules) {
+      _disableModules = disableModules;
+      return this;
   }
 
   AffiseInitProperties _getInitProperties() {
@@ -104,6 +111,7 @@ class AffiseSettings {
       onInitSuccessHandler: _onInitSuccessHandler,
       onInitErrorHandler: _onInitErrorHandler,
       configValues: _configValues,
+      disableModules: _disableModules,
     );
   }
 

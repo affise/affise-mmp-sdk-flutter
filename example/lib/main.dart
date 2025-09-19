@@ -52,6 +52,10 @@ class _MyAppState extends State<MyApp> {
         )
         .setConfigValue(AffiseConfig.FB_APP_ID, "1111111111111111")
         .setProduction(false) //To enable debug methods set Production to false
+        .setDisableModules([
+          // Exclude modules from start
+          AffiseModules.ADVERTISING
+        ])
         .start(); // Start Affise SDK
 
     // Deeplinks https://github.com/affise/affise-mmp-sdk-flutter#deeplinks

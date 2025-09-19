@@ -6,12 +6,16 @@ import '../../native/affise_native.dart';
 import '../appsflyer/affise_appsflyer.dart';
 import '../link/affise_link.dart';
 import '../subscription/affise_subscription.dart';
+import '../advertising/affise_advertising.dart';
 import 'affise_attribution_module_api.dart';
 
 
 abstract class AffiseAttributionModules implements AffiseAttributionModulesApi {
 
   final AffiseNative _native;
+
+  @override
+  final AffiseModuleAdvertisingApi advertising;
 
   @override
   final AffiseModuleAppsFlyerApi appsFlyer;
@@ -26,6 +30,7 @@ abstract class AffiseAttributionModules implements AffiseAttributionModulesApi {
   final AffiseModuleTikTokApi tikTok;
 
   AffiseAttributionModules(this._native) :
+        advertising = _AffiseModuleAdvertising(_native),
         appsFlyer = _AffiseModuleAppsFlyer(_native),
         link = _AffiseModuleLink(_native),
         subscription = _AffiseModuleSubscription(_native),
@@ -37,20 +42,6 @@ abstract class AffiseAttributionModules implements AffiseAttributionModulesApi {
     SchedulerBinding.instance.addPostFrameCallback((_) {
       _native.getStatus(module, callback);
     });
-  }
-
-  /// Manual module start
-  @override
-  Future<bool> moduleStart(AffiseModules module) async {
-    var completer = Completer<bool>();
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      _native.moduleStart(module).then((value) {
-        completer.complete(value);
-      }).catchError((error) {
-        completer.completeError(error);
-      });
-    });
-    return completer.future;
   }
 
   /// Get installed modules
@@ -94,6 +85,10 @@ abstract class AffiseAttributionModules implements AffiseAttributionModulesApi {
       ) {
     subscription.purchase(product, type, callback);
   }
+}
+
+class _AffiseModuleAdvertising extends AffiseAdvertising {
+  _AffiseModuleAdvertising(super.native);
 }
 
 class _AffiseModuleAppsFlyer extends AffiseAppsFlyer {

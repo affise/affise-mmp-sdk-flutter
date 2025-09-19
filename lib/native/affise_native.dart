@@ -219,10 +219,6 @@ class AffiseNative extends NativeBase {
   ////////////////////////////////////////
   // modules
   ////////////////////////////////////////
-  Future<bool> moduleStart(AffiseModules module) async {
-    return await native(AffiseApiMethod.MODULE_START, module.value);
-  }
-
   Future<List<AffiseModules>> getModulesInstalled() async {
     List<Object?>? data = await native(AffiseApiMethod.GET_MODULES_INSTALLED);
     final List<AffiseModules> result = [];
@@ -297,6 +293,11 @@ class AffiseNative extends NativeBase {
       DataName.EVENT_ID: eventId,
     };
     native(AffiseApiMethod.MODULE_TIKTOK_EVENT, data);
+  }
+
+  // Advertising Module
+  advertisingStartModule() { 
+      native(AffiseApiMethod.MODULE_ADVERTISING_START);
   }
   ////////////////////////////////////////
   // modules

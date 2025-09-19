@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.6.41] - 2025-09-19
+
+### Added
+
+- Api `Affise.settings.setDisableModules`
+- Module Api `Affise.module.advertising.startModule`
+
+### Removed
+
+- Api `Affise.module.moduleStart`
+
+### Changed
+
+- Update native iOS to [`1.6.55`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.55/CHANGELOG.md)
+- Update native Android to [`1.6.65`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.65/CHANGELOG.md)
+
 ## [1.6.40] - 2025-08-27
 
 ### Added
@@ -365,6 +381,7 @@
 - Api `Affise.android.getReferrer` to `Affise.getReferrer`
 - Api `Affise.android.getReferrerValue` to  `Affise.getReferrerValue`
   
+[1.6.41]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.40...1.6.41
 [1.6.40]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.39...1.6.40
 [1.6.39]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.38...1.6.39
 [1.6.38]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.37...1.6.38

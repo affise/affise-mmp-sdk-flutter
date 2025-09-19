@@ -41,7 +41,6 @@ enum AffiseApiMethod {
   ////////////////////////////////////////
   // modules
   ////////////////////////////////////////
-  MODULE_START,
   GET_MODULES_INSTALLED,
   GET_STATUS_CALLBACK,
   // AppsFlyer Module
@@ -53,6 +52,8 @@ enum AffiseApiMethod {
   MODULE_SUBS_PURCHASE_CALLBACK,
   // TikTok Module
   MODULE_TIKTOK_EVENT,
+  // Advertising Module
+  MODULE_ADVERTISING_START,
   ////////////////////////////////////////
   // modules
   ////////////////////////////////////////
@@ -138,8 +139,6 @@ extension AffiseApiMethodExt on AffiseApiMethod {
       ////////////////////////////////////////
       // modules
       ////////////////////////////////////////
-      case AffiseApiMethod.MODULE_START:
-        return "module_start";
       case AffiseApiMethod.GET_MODULES_INSTALLED:
         return "get_modules_installed";
       case AffiseApiMethod.GET_STATUS_CALLBACK:
@@ -158,6 +157,9 @@ extension AffiseApiMethodExt on AffiseApiMethod {
       // TikTok Module
       case AffiseApiMethod.MODULE_TIKTOK_EVENT:
         return "module_tiktok_event";
+      // Advertising Module
+      case AffiseApiMethod.MODULE_ADVERTISING_START:
+        return "module_advertising_start";
       ////////////////////////////////////////
       // modules
       ////////////////////////////////////////

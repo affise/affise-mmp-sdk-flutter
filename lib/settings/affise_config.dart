@@ -17,3 +17,9 @@ extension AffiseConfigExt on AffiseConfig {
     }
   }
 }
+
+extension AffiseConfigMapExt on Map<AffiseConfig, dynamic> {
+  Map<String, dynamic> get toStringMap {
+    return map((k, v) => MapEntry(k.value, v));
+  }
+}
