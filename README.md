@@ -4,7 +4,7 @@
 
 | Package                  |                         Version                          |
 |--------------------------|:--------------------------------------------------------:|
-| `affise_attribution_lib` | [`1.6.41`](https://github.com/affise/sdk-react/releases) |
+| `affise_attribution_lib` | [`1.6.42`](https://github.com/affise/sdk-react/releases) |
 
 - [Affise Attribution Flutter Library](#affise-attribution-flutter-library)
 - [Description](#description)
@@ -12,6 +12,13 @@
     - [SDK compatibility](#sdk-compatibility)
   - [Integration](#integration)
     - [Integrate as dependency](#integrate-as-dependency)
+    - [Initialize](#initialize)
+      - [Initialization callbacks](#initialization-callbacks)
+      - [Before application is published](#before-application-is-published)
+      - [Domain](#domain)
+    - [Requirements](#requirements)
+      - [Android](#android-1)
+      - [iOS](#ios-1)
     - [Modules](#modules)
       - [Android](#android)
       - [iOS](#ios)
@@ -23,16 +30,11 @@
       - [Module Huawei](#module-huawei)
       - [Module Link](#module-link)
       - [Module Meta](#module-meta)
+      - [Module Persistent](#module-persistent)
       - [Module Status](#module-status)
       - [Module Subscription](#module-subscription)
         - [AffiseProductType](#affiseproducttype)
       - [Module TikTok](#module-tiktok)
-    - [Initialize](#initialize)
-      - [Before application is published](#before-application-is-published)
-      - [Domain](#domain)
-    - [Requirements](#requirements)
-      - [Android](#android-1)
-      - [iOS](#ios-1)
 - [Features](#features)
   - [ProviderType identifiers collection](#providertype-identifiers-collection)
     - [Attribution](#attribution)
@@ -123,6 +125,122 @@ dependencies:
       url: https://github.com/affise/affise-mmp-sdk-flutter
 ```
 
+### Initialize
+
+After dependency is added, sync project with `flutter pub get` and initialize.
+
+> Demo app [`main.dart`](example/lib/main.dart)
+
+```dart
+import 'package:flutter/foundation.dart';
+import 'package:affise_attribution_lib/affise.dart';
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+
+    Affise
+      .settings(
+        affiseAppId: "Your appId", //Change to your app id
+        secretKey: "Your SDK secretKey", //Change to your SDK secretKey
+      )
+      .start(); // Start Affise SDK
+  }
+}
+```
+
+#### Initialization callbacks
+
+Check Affise library initialization
+
+```dart
+Affise
+  .settings(
+    affiseAppId: "Your appId",
+    secretKey: "Your SDK secretKey",
+  )
+  .setOnInitSuccess(() { 
+    // Called if library initialization succeeded
+    print("Affise: init success");
+  })
+  .setOnInitError((error) {
+    // Called if library initialization failed
+    print("Affise: init error  $error");
+  })
+  .start(); // Start Affise SDK
+```
+
+#### Before application is published
+
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> Please make sure your credentials are valid
+>
+> Visit section [validation credentials](#validate-credentials)
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
+#### Domain
+
+Set SDK server domain:
+
+```dart
+Affise
+  .settings(
+    affiseAppId: "Your appId", 
+    secretKey: "Your SDK secretKey",
+  )
+  .setProduction(false)
+  .setDomain("https://YoureCustomDomain/") // Set custom domain
+  .start(); // Start Affise SDK
+```
+
+### Requirements
+
+#### Android
+
+Minimal Android SDK version is 21
+Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
+
+```groovy
+android {
+  defaultConfig {
+    minSdkVersion Math.max(flutter.minSdkVersion, 21)
+  }
+}
+```
+
+For a minimal working functionality your app needs to declare internet permission:
+
+```xml
+<manifest>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
+```
+
+OAID certificate in your project [`example/android/app/src/main/assets/oaid.cert.pem`](example/android/app/src/main/assets/oaid.cert.pem)
+
+#### iOS
+
+Affise SDK uses `AppTrackingTransparency` framework to get `advertisingIdentifier`
+For working functionality your app needs to declare [`NSUserTrackingUsageDescription` permission](https://developer.apple.com/documentation/bundleresources/information_property_list/nsusertrackingusagedescription):
+
+Open XCode project `info.plist` and add key `NSUserTrackingUsageDescription` with string value
+
+Example [`info.plist`](example/ios/Runner/Info.plist):
+
+```xml
+<plist version="1.0">
+<dict>
+    ...
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Youre permission text</string>
+</dict>
+```
+
 ### Modules
 
 #### Android
@@ -147,7 +265,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.6.65'
+final affise_version = '1.6.66'
 
 dependencies {
     // Affise modules
@@ -172,14 +290,14 @@ Add modules to iOS project
 
 | Module         |                                       Version                                        |
 |----------------|:------------------------------------------------------------------------------------:|
-| `ADSERVICE`    | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `ADVERTISING`  | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `APPSFLYER`    | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `LINK`         | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `PERSISTENT`   | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `STATUS`       | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `SUBSCRIPTION` | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `TIKTOK`       | [`1.6.55`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `ADSERVICE`    | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `ADVERTISING`  | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `APPSFLYER`    | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `LINK`         | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `PERSISTENT`   | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `STATUS`       | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `SUBSCRIPTION` | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `TIKTOK`       | [`1.6.56`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 
 Example [example/ios/Podfile](example/ios/Podfile)
 
@@ -187,7 +305,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.6.55'
+  affise_version = '1.6.56'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules
@@ -366,6 +484,18 @@ Affise
   .start(); // Start Affise SDK
 ```
 
+#### Module Persistent
+
+`iOS Only`
+
+> [!NOTE]
+> 
+> Module requires user phone to be authenticated by Apple ID
+>
+> It uses Apple `Security` framework to store protected information in user account
+
+Persist `device id` value for [Get random device Id](#get-random-device-id) on application reinstall
+
 #### Module Status
 
 ```dart
@@ -464,115 +594,6 @@ Is Module present:
 Affise.module.tikTok.hasModule().then((hasModule) => {
   // Check is module present
 });
-```
-
-### Initialize
-
-After dependency is added, sync project with `flutter pub get` and initialize.
-
-> Demo app [`main.dart`](example/lib/main.dart)
-
-```dart
-import 'package:flutter/foundation.dart';
-import 'package:affise_attribution_lib/affise.dart';
-
-class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-
-    Affise
-      .settings(
-        affiseAppId: "Your appId", //Change to your app id
-        secretKey: "Your SDK secretKey", //Change to your SDK secretKey
-      )
-      .start(); // Start Affise SDK
-  }
-}
-```
-
-Check if library is initialized
-
-```dart
-Affise
-  .settings(
-    affiseAppId: "Your appId",
-    secretKey: "Your SDK secretKey",
-  )
-  .setOnInitSuccess(() {
-    // Called then library is initialized
-  })
-  .start();
-```
-
-#### Before application is published
-
-> [!CAUTION]
->
-> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
->
-> Please make sure your credentials are valid
->
-> Visit section [validation credentials](#validate-credentials)
->
-> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-
-#### Domain
-
-Set SDK server domain:
-
-```dart
-Affise
-  .settings(
-    affiseAppId: "Your appId", 
-    secretKey: "Your SDK secretKey",
-  )
-  .setProduction(false)
-  .setDomain("https://YoureCustomDomain/") // Set custom domain
-  .start(); // Start Affise SDK
-```
-
-### Requirements
-
-#### Android
-
-Minimal Android SDK version is 21
-Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
-
-```groovy
-android {
-  defaultConfig {
-    minSdkVersion Math.max(flutter.minSdkVersion, 21)
-  }
-}
-```
-
-For a minimal working functionality your app needs to declare internet permission:
-
-```xml
-<manifest>
-    <uses-permission android:name="android.permission.INTERNET"/>
-</manifest>
-```
-
-OAID certificate in your project [`example/android/app/src/main/assets/oaid.cert.pem`](example/android/app/src/main/assets/oaid.cert.pem)
-
-#### iOS
-
-Affise SDK uses `AppTrackingTransparency` framework to get `advertisingIdentifier`
-For working functionality your app needs to declare [`NSUserTrackingUsageDescription` permission](https://developer.apple.com/documentation/bundleresources/information_property_list/nsusertrackingusagedescription):
-
-Open XCode project `info.plist` and add key `NSUserTrackingUsageDescription` with string value
-
-Example [`info.plist`](example/ios/Runner/Info.plist):
-
-```xml
-<plist version="1.0">
-<dict>
-    ...
-	<key>NSUserTrackingUsageDescription</key>
-	<string>Youre permission text</string>
-</dict>
 ```
 
 # Features
@@ -1457,7 +1478,7 @@ Affise.getRandomUserId();
 >
 > To make `device id` more persistent on application reinstall
 >
-> use [Affise `Persistent` Module](#modules) for `iOS`
+> use [Affise `Persistent` Module](#modules-persistent) for `iOS`
 >
 > use [Affise `AndroidId` Module](#modules) for `Android`
 

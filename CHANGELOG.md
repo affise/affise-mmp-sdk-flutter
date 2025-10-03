@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.6.42] - 2025-10-03
+
+### Added
+
+- Error `SDK is already initialized` to `Affise.settings.setOnInitError`
+
+### Changed
+
+- Update native iOS to [`1.6.56`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.56/CHANGELOG.md)
+- Update native Android to [`1.6.66`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.66/CHANGELOG.md)
+
 ## [1.6.41] - 2025-09-19
 
 ### Added
@@ -381,6 +392,7 @@
 - Api `Affise.android.getReferrer` to `Affise.getReferrer`
 - Api `Affise.android.getReferrerValue` to  `Affise.getReferrerValue`
   
+[1.6.42]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.41...1.6.42
 [1.6.41]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.40...1.6.41
 [1.6.40]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.39...1.6.40
 [1.6.39]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.38...1.6.39

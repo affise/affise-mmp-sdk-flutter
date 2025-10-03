@@ -54,8 +54,21 @@ class _MyAppState extends State<MyApp> {
         .setProduction(false) //To enable debug methods set Production to false
         .setDisableModules([
           // Exclude modules from start
-          AffiseModules.ADVERTISING
+          AffiseModules.ADVERTISING,
+          AffiseModules.PERSISTENT,
         ])
+        .setOnInitSuccess(() { 
+          // Called if library initialization succeeded
+          if (kDebugMode) {
+            print("Affise: init success");
+          }
+        })
+        .setOnInitError((error) {
+          // Called if library initialization failed
+          if (kDebugMode) {
+            print("Affise: init error  $error");
+          }
+        })
         .start(); // Start Affise SDK
 
     // Deeplinks https://github.com/affise/affise-mmp-sdk-flutter#deeplinks
