@@ -24,8 +24,6 @@ extension TimeUnitTypeValue on TimeUnitType {
       return "month";
     case TimeUnitType.YEAR:
       return "year";
-      default:
-        return "";
     }
   }
 }

@@ -4,7 +4,7 @@
 
 | Package                  |                         Version                          |
 |--------------------------|:--------------------------------------------------------:|
-| `affise_attribution_lib` | [`1.6.42`](https://github.com/affise/sdk-react/releases) |
+| `affise_attribution_lib` | [`1.6.43`](https://github.com/affise/sdk-react/releases) |
 
 - [Affise Attribution Flutter Library](#affise-attribution-flutter-library)
 - [Description](#description)
@@ -105,9 +105,15 @@ referrer.
 
 ### SDK compatibility
 
-- `Xcode`   `14.2+`  
-- `iOS`     `12+`
+- `Flutter` `3.3.0+`
 - `Android` `24+`
+- `iOS`     `12+`
+- `Xcode`   `14.2+`
+- `Java`    `17+`
+
+Demo App:
+
+- `Flutter` `3.35.6+`
 
 ## Integration
 

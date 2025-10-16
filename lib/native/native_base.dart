@@ -77,8 +77,8 @@ class NativeBase extends NativeBasePlatform {
   }
 
   void removeApiCallback(AffiseApiMethod api) {
-    if(!_callbacksOnce.containsKey(api)) return;
-    _callbacksOnce.remove(api);
+    if(!_callbacksOnce.containsKey(api.apiName)) return;
+    _callbacksOnce.remove(api.apiName);
   }
 
   dynamic handleCallback(AffiseApiMethod api, dynamic callback, dynamic data, String? tag) {
@@ -97,6 +97,6 @@ class NativeBase extends NativeBasePlatform {
     handleStream(api, callback, data);
   }
 
-  handleStream(AffiseApiMethod api, dynamic callback, dynamic data) {
+  void handleStream(AffiseApiMethod api, dynamic callback, dynamic data) {
   }
 }

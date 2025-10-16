@@ -38,13 +38,13 @@ abstract class Event {
     return this;
   }
 
-  /// Add predefined [parameter] with [value] of List<Map<String, dynamic>> to event
+  /// Add predefined [parameter] with [value] of List &lt; Map &lt; String, dynamic &gt &gt to event
   Event addPredefinedListObject(PredefinedListObject parameter, List<Map<String, dynamic>> value) {
     _predefinedParameters[parameter.value] = value;
     return this;
   }
 
-  /// Add predefined [parameter] with [value] of List<String> to event
+  /// Add predefined [parameter] with [value] of List of String to event
   Event addPredefinedListString(PredefinedListString parameter, List<String> value) {
     _predefinedParameters[parameter.value] = value;
     return this;
@@ -56,7 +56,7 @@ abstract class Event {
     return this;
   }
 
-  /// Add predefined [parameter] with [value] of Map<String, dynamic> to event
+  /// Add predefined [parameter] with [value] of Map of (String, dynamic) to event
   Event addPredefinedObject(PredefinedObject parameter, Map<String, dynamic> value) {
     _predefinedParameters[parameter.value] = value;
     return this;
@@ -68,7 +68,7 @@ abstract class Event {
     return this;
   }
 
-  /// Add predefined [parameter] with [value] of List<PredefinedGroup> to event
+  /// Add predefined [parameter] with [value] of List of PredefinedGroup to event
   // addPredefinedListGroup
   // Event addPredefinedListGroup(List<PredefinedGroup> value) {
   //   if (!_predefinedParameters.containsKey(PredefinedGroup.NAME)) {

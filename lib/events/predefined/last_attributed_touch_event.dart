@@ -1,7 +1,6 @@
 import '../native_event.dart';
 import '../event_name.dart';
 
-import 'touch_type.dart';
 
 /// Event LastAttributedTouch
 ///

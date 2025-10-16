@@ -19,8 +19,6 @@ extension AffiseAdSourceValue on AffiseAdSource {
         return "helium_chartboost";
       case AffiseAdSource.IRONSOURCE:
         return "ironsource";
-      default:
-        return "";
-    }
+      }
   }
 }

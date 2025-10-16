@@ -1,4 +1,4 @@
-import 'package:collection/collection.dart';
+import '../utils/list_ext.dart';
 
 enum AffiseModules {
   ADSERVICE,
@@ -18,7 +18,7 @@ enum AffiseModules {
 
   static AffiseModules? fromString(String? value) {
     if (value == null) return null;
-    return AffiseModules.values.firstWhereOrNull((e) => e.value == value);
+    return AffiseModules.values.firstElementOrNull((e) => e.value == value);
   }
 }
 

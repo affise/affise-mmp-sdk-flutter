@@ -1,6 +1,4 @@
-/**
- * Type of touch
- */
+/// Type of touch
 enum TouchType {
   CLICK,
   WEB_TO_APP_AUTO_REDIRECT,
@@ -17,8 +15,6 @@ extension TouchTypeValue on TouchType {
         return "WEB_TO_APP_AUTO_REDIRECT";
       case TouchType.IMPRESSION:
         return "IMPRESSION";
-      default:
-        return "";
-    }
+      }
   }
 }

@@ -51,13 +51,13 @@ class _AffiseStoreState extends State<AffiseStore> {
           Flexible(
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.onBackground.withOpacity(.05),
+                color: Theme.of(context).colorScheme.onSurface.withOpacity(.05),
                 borderRadius: const BorderRadius.all(Radius.circular(8)),
               ),
               child: ListView.separated(
                 shrinkWrap: true,
                 separatorBuilder: (context, index) => Divider(
-                  color: Theme.of(context).colorScheme.onBackground.withOpacity(.1),
+                  color: Theme.of(context).colorScheme.onSurface.withOpacity(.1),
                   thickness: 2,
                   height: 1,
                 ),
@@ -81,7 +81,7 @@ class _AffiseStoreState extends State<AffiseStore> {
     );
   }
 
-  fetchProducts({bool skipCheck = true}) {
+  void fetchProducts({bool skipCheck = true}) {
     Affise.module.fetchProducts(storeData.keys.toList(), (result) {
       if (result.isSuccess) {
         var value = result.asSuccess;
@@ -99,7 +99,7 @@ class _AffiseStoreState extends State<AffiseStore> {
     });
   }
 
-  purchase(AffiseProduct product, AffiseProductType type) {
+  void purchase(AffiseProduct product, AffiseProductType type) {
     Affise.module.purchase(product, type, (result) {
       if (result.isSuccess) {
         var purchasedInfo = result.asSuccess;

@@ -196,9 +196,6 @@ extension EventNameExt on EventName {
         return "ViewItem";
       case EventName.VIEW_ITEMS:
         return "ViewItems";
-
-      default:
-        return "";
-    }
+      }
   }
 }

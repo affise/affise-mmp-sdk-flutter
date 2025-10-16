@@ -64,8 +64,6 @@ extension SubscriptionSubTypeExt on SubscriptionSubType {
         return "affise_sub_renewed_subscription_from_retry";
       case SubscriptionSubType.AFFISE_SUB_UNSUBSCRIPTION:
         return "affise_sub_unsubscription";
-      default:
-        return "";
-    }
+      }
   }
 }

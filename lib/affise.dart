@@ -159,7 +159,7 @@ class Affise {
 
   /// Get module status
   @Deprecated('Use `Affise.module.getStatus` instead')
-  static getStatus(AffiseModules module, OnKeyValueCallback callback)  {
+  static void getStatus(AffiseModules module, OnKeyValueCallback callback)  {
     Affise.module.getStatus(module, callback);
   }
 

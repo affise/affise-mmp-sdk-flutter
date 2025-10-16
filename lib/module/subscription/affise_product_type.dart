@@ -24,8 +24,6 @@ extension AffiseProductTypeValue on AffiseProductType {
         return "renewable_subscription";
       case AffiseProductType.NON_RENEWABLE_SUBSCRIPTION:
         return "non_renewable_subscription";
-      default:
-        return "";
-    }
+      }
   }
 }

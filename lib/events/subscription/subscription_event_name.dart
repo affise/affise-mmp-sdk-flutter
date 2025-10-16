@@ -20,8 +20,6 @@ extension SubscriptionEventNameExt on SubscriptionEventName {
     case SubscriptionEventName.AFFISE_SUBSCRIPTION_RENEWAL: return "affise_subscription_renewal";
     case SubscriptionEventName.AFFISE_SUBSCRIPTION_RENEWAL_FROM_BILLING_RETRY: return "affise_subscription_renewal_from_billing_retry";
     case SubscriptionEventName.AFFISE_UNSUBSCRIPTION: return "affise_unsubscription";
-      default:
-        return "";
     }
   }
 }

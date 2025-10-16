@@ -63,7 +63,7 @@ class _AffiseWidgetState extends State<AffiseWidget> {
                 backgroundColor: (items[index] is BaseSubscriptionEvent)
                     ? Colors.red
                     : Colors.blue,
-                foregroundColor: Theme.of(context).colorScheme.onBackground,
+                foregroundColor: Theme.of(context).colorScheme.onSurface,
                 text: items[index].runtimeType.toString().toWords().toUpperCase(),
               );
             },

@@ -109,8 +109,6 @@ extension ReferrerKeyValue on ReferrerKey {
         return "affise_sub4";
       case ReferrerKey.AFFISE_SUB_5:
         return "affise_sub5";
-      default:
-        return "";
-    }
+      }
   }
 }

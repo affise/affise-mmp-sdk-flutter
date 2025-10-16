@@ -38,7 +38,7 @@ abstract class AffiseIOS implements AffiseIOSApi {
   @override
   void getReferrerOnServerValue(ReferrerKey key, ReferrerCallback callback) {
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      _native?.getDeferredDeeplinkValue(key, callback);
+      _native.getDeferredDeeplinkValue(key, callback);
     });
   }
 }

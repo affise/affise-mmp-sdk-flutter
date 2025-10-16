@@ -1,4 +1,4 @@
-import 'package:collection/collection.dart';
+import '../utils/list_ext.dart';
 
 enum ProviderType {
   AFFISE_APP_ID,
@@ -109,7 +109,7 @@ enum ProviderType {
 
   static ProviderType? fromString(String? value) {
     if (value == null) return null;
-    return ProviderType.values.firstWhereOrNull((e) => e.provider == value);
+    return ProviderType.values.firstElementOrNull((e) => e.provider == value);
   }
 }
 
@@ -321,6 +321,6 @@ extension ProviderTypeExt on ProviderType {
 
   static ProviderType? fromString(String? value) {
     if (value == null) return null;
-    return ProviderType.values.firstWhereOrNull((e) => e.provider == value);
+    return ProviderType.values.firstElementOrNull((e) => e.provider == value);
   }
 }

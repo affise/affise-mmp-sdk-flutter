@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/scheduler.dart';
 
 import '../../native/affise_native.dart';

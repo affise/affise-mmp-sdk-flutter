@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.43] - 2025-10-16
+
+### Changed
+
+- Update `Flutter` minimal SDK to `3.3.0`
+- Update Demo App run on `Flutter` `3.35.6`
+
 ## [1.6.42] - 2025-10-03
 
 ### Added
@@ -392,6 +399,7 @@
 - Api `Affise.android.getReferrer` to `Affise.getReferrer`
 - Api `Affise.android.getReferrerValue` to  `Affise.getReferrerValue`
   
+[1.6.43]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.42...1.6.43
 [1.6.42]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.41...1.6.42
 [1.6.41]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.40...1.6.41
 [1.6.40]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.39...1.6.40

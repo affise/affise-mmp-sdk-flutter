@@ -502,10 +502,6 @@ class DefaultEventsFactory implements EventsFactory {
   }
 
   Event createTravelBookingEvent() {
-    List<String> data = [
-      "may",
-      "august",
-    ];
     return TravelBookingEvent(userData: "booking")
         .addPredefinedLong(PredefinedLong.NUM_ADULTS, 1)
         .addPredefinedLong(PredefinedLong.NUM_CHILDREN, 2)

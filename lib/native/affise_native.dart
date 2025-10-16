@@ -277,7 +277,7 @@ class AffiseNative extends NativeBase {
   }
 
   // AppsFlyer Module
-  appsFlyerLogEvent(String eventName, Map<String, dynamic> eventValues) {
+  void appsFlyerLogEvent(String eventName, Map<String, dynamic> eventValues) {
     final Map<String, dynamic> data = {
       DataName.EVENT_NAME: eventName,
       DataName.EVENT_VALUES: eventValues,
@@ -286,7 +286,7 @@ class AffiseNative extends NativeBase {
   }
 
   // TikTok Module
-  tikTokSendEvent(String eventName, Map<String, dynamic> properties, String eventId) {
+  void tikTokSendEvent(String eventName, Map<String, dynamic> properties, String eventId) {
     final Map<String, dynamic> data = {
       DataName.EVENT_NAME: eventName,
       DataName.EVENT_VALUES: properties,
@@ -296,7 +296,7 @@ class AffiseNative extends NativeBase {
   }
 
   // Advertising Module
-  advertisingStartModule() { 
+  void advertisingStartModule() {
       native(AffiseApiMethod.MODULE_ADVERTISING_START);
   }
   ////////////////////////////////////////
@@ -401,7 +401,7 @@ class AffiseNative extends NativeBase {
   }
 
   @override
-  handleStream(AffiseApiMethod api, dynamic callback, dynamic data) {
+  void handleStream(AffiseApiMethod api, dynamic callback, dynamic data) {
     if (callback == null) return;
     switch (api) {
       case AffiseApiMethod.REGISTER_DEEPLINK_CALLBACK:

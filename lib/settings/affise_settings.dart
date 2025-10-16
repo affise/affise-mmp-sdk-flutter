@@ -15,7 +15,7 @@ class AffiseSettings {
   // bool _enabledMetrics = false;
   OnInitSuccessHandler? _onInitSuccessHandler;
   OnInitErrorHandler? _onInitErrorHandler;
-  Map<AffiseConfig, dynamic> _configValues = {};
+  final Map<AffiseConfig, dynamic> _configValues = {};
   List<AffiseModules> _disableModules = [];
 
   /// Affise SDK settings

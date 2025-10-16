@@ -110,11 +110,11 @@ class _MyAppState extends State<MyApp> {
           title: TabBar(
             labelColor: Theme.of(context).colorScheme.primary,
             indicatorColor: Theme.of(context).colorScheme.primary,
-            tabs: [
+            tabs: const [
               Tab(
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
+                  children: [
                     Icon(Icons.swap_horiz),
                     SizedBox(width: 8),
                     Text('API'),
@@ -124,7 +124,7 @@ class _MyAppState extends State<MyApp> {
               Tab(
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
+                  children: [
                     Icon(Icons.file_upload),
                     SizedBox(width: 8),
                     Text('Events'),
@@ -134,7 +134,7 @@ class _MyAppState extends State<MyApp> {
               Tab(
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
+                  children: [
                     Icon(Icons.store),
                     SizedBox(width: 8),
                     Text('Store'),

@@ -19,8 +19,8 @@ class AffiseButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.background,
-        foregroundColor: foregroundColor ?? Theme.of(context).colorScheme.onBackground,
+        backgroundColor: backgroundColor ?? Theme.of(context).colorScheme.surface,
+        foregroundColor: foregroundColor ?? Theme.of(context).colorScheme.onSurface,
         shape:  const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8)),
         ),

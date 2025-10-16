@@ -13,8 +13,6 @@ extension AffisePropertyExt on AffiseProperty {
         return "type";
       case AffiseProperty.DATA:
         return "data";
-      default:
-        return "";
-    }
+      }
   }
 }

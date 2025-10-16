@@ -21,9 +21,7 @@ extension AutoCatchingTypeValue on AutoCatchingType {
         return "IMAGE";
       case AutoCatchingType.GROUP:
         return "GROUP";
-      default:
-        return "";
-    }
+      }
   }
 }
 

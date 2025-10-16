@@ -7,7 +7,7 @@ abstract class AffiseAttributionModulesApi {
   AffiseModuleSubscriptionApi get subscription;
   AffiseModuleTikTokApi get tikTok;
 
-  getStatus(AffiseModules module, OnKeyValueCallback callback);
+  void getStatus(AffiseModules module, OnKeyValueCallback callback);
 
   Future<List<AffiseModules>> getModulesInstalled();
 

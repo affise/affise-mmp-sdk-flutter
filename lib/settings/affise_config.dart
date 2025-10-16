@@ -1,11 +1,11 @@
-import 'package:collection/collection.dart';
+import '../utils/list_ext.dart';
 
 enum AffiseConfig {
   FB_APP_ID;
 
   static AffiseConfig? fromString(String? value) {
     if (value == null) return null;
-    return AffiseConfig.values.firstWhereOrNull((e) => e.value == value);
+    return AffiseConfig.values.firstElementOrNull((e) => e.value == value);
   }
 }
 
