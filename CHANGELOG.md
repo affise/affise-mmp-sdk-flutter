@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.6.44] - 2025-10-17
+
+### Fixed
+
+- Fix Xcode 16+ `channel sent a message from native Flutter on non-platform thread`
+
 ## [1.6.43] - 2025-10-16
 
 ### Changed

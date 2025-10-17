@@ -31,7 +31,9 @@ public class AffiseAttributionLibPlugin: NSObject, FlutterPlugin, FlutterStreamH
         apiWrapper?.flutter()
                
         apiWrapper?.setCallback { (apiName: String, data: [String: Any?]) in
-            self.channel?.invokeMethod(apiName, arguments: data)
+            DispatchQueue.main.async {
+                self.channel?.invokeMethod(apiName, arguments: data)
+            }
         }
     }
     

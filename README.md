@@ -4,7 +4,7 @@
 
 | Package                  |                         Version                          |
 |--------------------------|:--------------------------------------------------------:|
-| `affise_attribution_lib` | [`1.6.43`](https://github.com/affise/sdk-react/releases) |
+| `affise_attribution_lib` | [`1.6.44`](https://github.com/affise/sdk-react/releases) |
 
 - [Affise Attribution Flutter Library](#affise-attribution-flutter-library)
 - [Description](#description)
@@ -1727,6 +1727,27 @@ Affise.debug.versionNative().then((version) {
 > Flutter relaunch on live code change, 
 > but native code (such as Affise native library) won't restart 
 > unless Android application is **manually restarted** or **completely rebuild**
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
+
+> [!NOTE]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+> 
+> Then reporting a **BUG**
+>
+> **Please** provide information:
+>
+> 1. From command `flutter doctor -v`
+>
+> 2. On which platform bug occurred `iOS` or `Android`
+>
+> 3. Detailed log of a bug
+>
+> 4. Steps to reproduse a bug
+>
+> 5. Code which cause a bug
 >
 > 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 
