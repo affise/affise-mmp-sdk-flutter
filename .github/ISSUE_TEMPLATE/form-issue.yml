@@ -15,9 +15,9 @@ body:
   - type: input
     id: version-tag
     attributes:
-      label: Version
+      label: Library Version
       description: Tell us Affise Flutter library version
-      placeholder: Version
+      placeholder: Library Version
     validations:
       required: true
 
@@ -79,7 +79,7 @@ body:
       options:
         - label: Read [documentation](https://github.com/affise/affise-mmp-sdk-flutter/blob/main/README.md)
           required: true
-        - label: Tried [Troubleshoots](https://github.com/affise/affise-mmp-sdk-flutter/blob/main/README.md#Troubleshoots)
+        - label: Read [Troubleshoots](https://github.com/affise/affise-mmp-sdk-flutter/blob/main/README.md#Troubleshoots)
           required: true
     validations:
       required: true
