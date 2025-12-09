@@ -1,9 +1,9 @@
 group = "com.affise.attribution.affise_attribution_lib"
-version = "1.6.46"
+version = "1.6.47"
 
 buildscript {
     ext.kotlin_version = "2.1.0"
-    ext.affise_version = "1.6.67"
+    ext.affise_version = "1.6.68"
     ext.agp_version = "8.9.1"
 
     repositories {
