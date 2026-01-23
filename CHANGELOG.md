@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.6.49] - 2026-01-23
+
+### Added
+
+- Api `Affise.getRandomUserId` added new algorithm for id generation
+- Api `Affise.getRandomDeviceId` added new algorithm for id generation
+- Error value for `AffiseError.UUID_NO_VALID_METHOD` is `22222222-2222-2222-2222-222222222222`
+- Error value for `AffiseError.UUID_NOT_INITIALIZED` is `11111111-1111-1111-1111-111111111111`
+- Api `Affise.getRandomUserId` return `AffiseError.UUID_NOT_INITIALIZED` if SDK not initialized
+- Api `Affise.getRandomUserId` return `AffiseError.UUID_NO_VALID_METHOD` if no valid methods to retrieve id
+- Api `Affise.getRandomDeviceId` return `AffiseError.UUID_NOT_INITIALIZED` if SDK not initialized
+- Api `Affise.getRandomDeviceId` return `AffiseError.UUID_NO_VALID_METHOD` if no valid methods to retrieve id
+
+### Fixed
+
+- Fix `Android` `Affise.module.link.resolve` redirect
+
+### Changed
+
+- Update native iOS to [`1.6.59`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.59/CHANGELOG.md)
+- Update native Android to [`1.6.73`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.73/CHANGELOG.md)
+
 ## [1.6.48] - 2025-12-18
 
 ### Changed
@@ -443,6 +465,7 @@
 - Api `Affise.android.getReferrer` to `Affise.getReferrer`
 - Api `Affise.android.getReferrerValue` to  `Affise.getReferrerValue`
   
+[1.6.49]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.48...1.6.49
 [1.6.48]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.47...1.6.48
 [1.6.47]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.46...1.6.47
 [1.6.46]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.45...1.6.46

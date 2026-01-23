@@ -4,7 +4,7 @@
 
 | Package                  |                         Version                          |
 |--------------------------|:--------------------------------------------------------:|
-| `affise_attribution_lib` | [`1.6.48`](https://github.com/affise/sdk-react/releases) |
+| `affise_attribution_lib` | [`1.6.49`](https://github.com/affise/sdk-react/releases) |
 
 - [Affise Attribution Flutter Library](#affise-attribution-flutter-library)
 - [Description](#description)
@@ -273,7 +273,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.6.72'
+final affise_version = '1.6.73'
 
 dependencies {
     // Affise modules
@@ -298,14 +298,14 @@ Add modules to iOS project
 
 | Module         |                                       Version                                        |
 |----------------|:------------------------------------------------------------------------------------:|
-| `ADSERVICE`    | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `ADVERTISING`  | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `APPSFLYER`    | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `LINK`         | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `PERSISTENT`   | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `STATUS`       | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `SUBSCRIPTION` | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
-| `TIKTOK`       | [`1.6.58`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `ADSERVICE`    | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `ADVERTISING`  | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `APPSFLYER`    | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `LINK`         | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `PERSISTENT`   | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `STATUS`       | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `SUBSCRIPTION` | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `TIKTOK`       | [`1.6.59`](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 
 Example [example/ios/Podfile](example/ios/Podfile)
 
@@ -313,7 +313,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.6.58'
+  affise_version = '1.6.59'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules
@@ -1555,6 +1555,20 @@ Affise.isBackgroundTrackingEnabled(); // returns true or false describing curren
 Affise.getRandomUserId();
 ```
 
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> Return `11111111-1111-1111-1111-111111111111` if **Affise SDK not initialized**
+> 
+> Return `22222222-2222-2222-2222-222222222222` if **no valid methods** to retrieve id **for current device**
+>
+> `AffiseError.UUID_NOT_INITIALIZED` == `11111111-1111-1111-1111-111111111111`
+>
+> `AffiseError.UUID_NO_VALID_METHOD` == `22222222-2222-2222-2222-222222222222`
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
 ## Get Affice device Id
 
 > [!NOTE] 
@@ -1573,6 +1587,20 @@ Affise.getRandomUserId();
 Affise.getRandomDeviceId();
 ```
 
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> Return `11111111-1111-1111-1111-111111111111` if **Affise SDK not initialized**
+> 
+> Return `22222222-2222-2222-2222-222222222222` if **no valid methods** to retrieve id **for current device**
+> 
+> `AffiseError.UUID_NOT_INITIALIZED` == `11111111-1111-1111-1111-111111111111`
+> 
+> `AffiseError.UUID_NO_VALID_METHOD` == `22222222-2222-2222-2222-222222222222`
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
 ## Get providers
 
 Returns providers map with [ProviderType](#providertype-identifiers-collection) as key
@@ -1583,6 +1611,14 @@ Affise.getProviders().then((providers) {
   var value = providers[key];
 });
 ```
+
+> [!CAUTION]
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+>
+> Return **Empty Map** if **Affise SDK not initialized**
+>
+> 🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
 
 ## Is first run
 ```dart

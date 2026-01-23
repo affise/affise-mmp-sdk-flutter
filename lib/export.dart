@@ -3,6 +3,7 @@ export 'affise_init_properties.dart';
 export 'ad/export.dart';
 export 'debug/export.dart';
 export 'deeplink/export.dart';
+export 'errors/affise_error.dart';
 export 'events/export.dart';
 export 'module/export.dart';
 export 'referrer/export.dart';
