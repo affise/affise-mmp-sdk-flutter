@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.6.50] - 2026-02-04
+
+### Added
+
+- Provider `REFERRER_UPDATED`
+
+### Fixed
+
+- Android InstallReferrer reconnect on service disconnected
+
+### Changed
+
+- Update native Android to [`1.6.74`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.74/CHANGELOG.md)
+
 ## [1.6.49] - 2026-01-23
 
 ### Added
@@ -465,6 +479,7 @@
 - Api `Affise.android.getReferrer` to `Affise.getReferrer`
 - Api `Affise.android.getReferrerValue` to  `Affise.getReferrerValue`
   
+[1.6.50]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.49...1.6.50
 [1.6.49]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.48...1.6.49
 [1.6.48]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.47...1.6.48
 [1.6.47]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.46...1.6.47

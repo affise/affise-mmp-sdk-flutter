@@ -44,6 +44,7 @@ enum ProviderType {
   REFTOKEN,
   REFTOKENS,
   REFERRER,
+  REFERRER_UPDATED,
   USER_AGENT,
   MCCODE,
   MNCODE,
@@ -202,6 +203,8 @@ extension ProviderTypeExt on ProviderType {
         return "reftokens";
       case ProviderType.REFERRER:
         return "referrer";
+      case ProviderType.REFERRER_UPDATED:
+        return "referrer_updated";
       case ProviderType.USER_AGENT:
         return "user_agent";
       case ProviderType.MCCODE:

@@ -4,7 +4,7 @@
 
 | Package                  |                         Version                          |
 |--------------------------|:--------------------------------------------------------:|
-| `affise_attribution_lib` | [`1.6.49`](https://github.com/affise/sdk-react/releases) |
+| `affise_attribution_lib` | [`1.6.50`](https://github.com/affise/sdk-react/releases) |
 
 - [Affise Attribution Flutter Library](#affise-attribution-flutter-library)
 - [Description](#description)
@@ -273,7 +273,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.6.73'
+final affise_version = '1.6.74'
 
 dependencies {
     // Affise modules
@@ -728,6 +728,7 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `REFTOKEN`
 - `REFTOKENS`
 - `REFERRER`
+- `REFERRER_UPDATED`
 - `USER_AGENT`
 - `MCCODE`
 - `MNCODE`
