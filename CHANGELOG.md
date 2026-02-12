@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.6.51] - 2026-02-12
+
+### Fixed
+
+- Fix `Affise.module.link.resolve` content downloading will be skipped
+
+### Changed
+
+- Update native iOS to [`1.6.60`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.6.60/CHANGELOG.md)
+- Update native Android to [`1.6.75`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.6.75/CHANGELOG.md)
+
 ## [1.6.50] - 2026-02-04
 
 ### Added
@@ -479,6 +490,7 @@
 - Api `Affise.android.getReferrer` to `Affise.getReferrer`
 - Api `Affise.android.getReferrerValue` to  `Affise.getReferrerValue`
   
+[1.6.51]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.50...1.6.51
 [1.6.50]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.49...1.6.50
 [1.6.49]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.48...1.6.49
 [1.6.48]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.47...1.6.48
