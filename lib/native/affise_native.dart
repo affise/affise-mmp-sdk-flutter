@@ -34,10 +34,6 @@ class AffiseNative extends NativeBase {
     native(AffiseApiMethod.INIT, initProperties.toMap);
   }
 
-  Future<bool> isInitialized() async {
-    return await native(AffiseApiMethod.IS_INITIALIZED);
-  }
-
   void sendEvent(Event event) {
     native(AffiseApiMethod.SEND_EVENT, converter.convert(event));
   }

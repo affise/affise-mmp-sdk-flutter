@@ -42,7 +42,7 @@ flutter {
 }
 
 dependencies {
-    val affise_version = "1.6.76"
+    val affise_version = "1.7.1"
 
     // Affise modules
     implementation("com.affise:module-advertising:$affise_version")
@@ -56,5 +56,5 @@ dependencies {
     implementation("com.affise:module-appsflyer:$affise_version")
     // implementation("com.affise:module-rustore:$affise_version")
     // implementation("com.affise:module-huawei:$affise_version")
-    implementation("com.affise:module-tiktok:$affise_version")
+    // implementation("com.affise:module-tiktok:$affise_version")
 }

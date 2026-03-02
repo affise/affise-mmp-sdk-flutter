@@ -1,9 +1,12 @@
+import 'package:flutter/scheduler.dart';
 import '../affise.dart';
+import '../native/affise_native.dart';
 export 'on_init_success_handler.dart';
 export 'on_init_error_handler.dart';
 export 'affise_config.dart';
 
 class AffiseSettings {
+  final AffiseNative native;
   final String affiseAppId;
   final String secretKey;
   String? _domain;
@@ -21,7 +24,7 @@ class AffiseSettings {
   /// Affise SDK settings
   /// [affiseAppId] - your app id
   /// [secretKey] - your SDK secretKey
-  AffiseSettings(this.affiseAppId, this.secretKey);
+  AffiseSettings(this.native, this.affiseAppId, this.secretKey);
 
   /// Set Affise SDK for SandBox / Production
   AffiseSettings setProduction(bool production) {
@@ -117,6 +120,8 @@ class AffiseSettings {
 
   /// Starts Affise SDK
   void start() {
-    Affise.start(_getInitProperties());
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      native.init(_getInitProperties());
+    });
   }
 }

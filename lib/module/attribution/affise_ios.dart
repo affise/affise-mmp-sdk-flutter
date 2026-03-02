@@ -23,22 +23,4 @@ abstract class AffiseIOS implements AffiseIOSApi {
       _native.updatePostbackConversionValue(fineValue, coarseValue.value, completionHandler);
     });
   }
-
-  /// Get referrer on server
-  @Deprecated('Use `Affise.getDeferredDeeplink` instead')
-  @override
-  void getReferrerOnServer(ReferrerCallback callback) {
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      _native.getDeferredDeeplink(callback);
-    });
-  }
-
-  /// Get referrer on server value
-  @Deprecated('Use `Affise.getDeferredDeeplinkValue` instead')
-  @override
-  void getReferrerOnServerValue(ReferrerKey key, ReferrerCallback callback) {
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      _native.getDeferredDeeplinkValue(key, callback);
-    });
-  }
 }

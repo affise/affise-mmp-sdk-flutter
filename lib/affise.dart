@@ -14,27 +14,7 @@ class Affise {
 
   /// Affise SDK settings builder
   static AffiseSettings settings({required String affiseAppId, required String secretKey}) {
-    return AffiseSettings(affiseAppId, secretKey);
-  }
-
-  /// Init [AffiseComponent] with [initProperties]
-  static void start(AffiseInitProperties initProperties) {
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      _native.init(initProperties);
-    });
-  }
-
-  @Deprecated('Use `Affise.settings.setOnInitSuccess` instead')
-  static Future<bool> isInitialized() async {
-    var completer = Completer<bool>();
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      _native.isInitialized().then((value) {
-        completer.complete(value);
-      }).catchError((error) {
-        completer.completeError(error);
-      });
-    });
-    return completer.future;
+    return AffiseSettings(_native, affiseAppId, secretKey);
   }
 
   /// Store and send [event]
@@ -157,17 +137,6 @@ class Affise {
   //   });
   // }
 
-  /// Get module status
-  @Deprecated('Use `Affise.module.getStatus` instead')
-  static void getStatus(AffiseModules module, OnKeyValueCallback callback)  {
-    Affise.module.getStatus(module, callback);
-  }
-
-  /// Get installed modules
-  @Deprecated('Use `Affise.module.getModulesInstalled` instead')
-  static Future<List<AffiseModules>> getModulesInstalled() async {
-    return Affise.module.getModulesInstalled();
-  }
 
   /// Get random User Id
   static Future<String> getRandomUserId() async {
@@ -222,18 +191,6 @@ class Affise {
   }
 
   /// Get referrer
-  @Deprecated('Use `Affise.getReferrerUrl` instead')
-  static void getReferrer(ReferrerCallback callback) {
-    getReferrerUrl(callback);
-  }
-
-  /// Get referrer Value
-  @Deprecated('Use `Affise.getReferrerUrlValue` instead')
-  static void getReferrerValue(ReferrerKey key, ReferrerCallback callback) {
-    getReferrerUrlValue(key, callback);
-  }
-
-  /// Get referrer
   static void getReferrerUrl(ReferrerCallback callback) {
     SchedulerBinding.instance.addPostFrameCallback((_) {
       _native.getReferrerUrl(callback);
@@ -245,18 +202,6 @@ class Affise {
     SchedulerBinding.instance.addPostFrameCallback((_) {
       _native.getReferrerUrlValue(key, callback);
     });
-  }
-
-  /// Get referrer on server
-  @Deprecated('Use `Affise.getDeferredDeeplink` instead')
-  static void getReferrerOnServer(ReferrerCallback callback) {
-    Affise.getDeferredDeeplink(callback);
-  }
-
-  /// Get referrer on server value
-  @Deprecated('Use `Affise.getDeferredDeeplinkValue` instead')
-  static void getReferrerOnServerValue(ReferrerKey key, ReferrerCallback callback) {
-    Affise.getDeferredDeeplinkValue(key, callback);
   }
 
   /// Get deferred deeplink on server

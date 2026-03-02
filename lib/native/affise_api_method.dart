@@ -1,6 +1,5 @@
 enum AffiseApiMethod {
   INIT,
-  IS_INITIALIZED,
   SEND_EVENT,
   SEND_EVENT_NOW,
   ADD_PUSH_TOKEN,
@@ -70,8 +69,6 @@ extension AffiseApiMethodExt on AffiseApiMethod {
     switch (this) {
       case AffiseApiMethod.INIT:
         return "init";
-      case AffiseApiMethod.IS_INITIALIZED:
-        return "is_initialized";
       case AffiseApiMethod.SEND_EVENT:
         return "send_event";
       case AffiseApiMethod.SEND_EVENT_NOW:

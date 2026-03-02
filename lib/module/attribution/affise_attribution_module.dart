@@ -57,34 +57,6 @@ abstract class AffiseAttributionModules implements AffiseAttributionModulesApi {
     });
     return completer.future;
   }
-
-  /// Module Link url Resolve
-  @Deprecated('Use `Affise.module.link.resolve` instead')
-  @override
-  void linkResolve(String url, AffiseLinkCallback callback) {
-    link.resolve(url, callback);
-  }
-
-  /// Module subscription fetchProducts
-  @Deprecated('Use `Affise.module.subscription.fetchProducts` instead')
-  @override
-  void fetchProducts(
-      List<String> ids,
-      AffiseResultCallback<AffiseProductsResult> callback,
-      ) {
-    subscription.fetchProducts(ids, callback);
-  }
-
-  /// Module subscription purchase
-  @Deprecated('Use `Affise.module.subscription.purchase` instead')
-  @override
-  void purchase(
-      AffiseProduct product,
-      AffiseProductType type,
-      AffiseResultCallback<AffisePurchasedInfo> callback,
-      ) {
-    subscription.purchase(product, type, callback);
-  }
 }
 
 class _AffiseModuleAdvertising extends AffiseAdvertising {

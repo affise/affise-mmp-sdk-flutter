@@ -82,7 +82,7 @@ class _AffiseStoreState extends State<AffiseStore> {
   }
 
   void fetchProducts({bool skipCheck = true}) {
-    Affise.module.fetchProducts(storeData.keys.toList(), (result) {
+    Affise.module.subscription.fetchProducts(storeData.keys.toList(), (result) {
       if (result.isSuccess) {
         var value = result.asSuccess;
         setState(() {
@@ -100,7 +100,7 @@ class _AffiseStoreState extends State<AffiseStore> {
   }
 
   void purchase(AffiseProduct product, AffiseProductType type) {
-    Affise.module.purchase(product, type, (result) {
+    Affise.module.subscription.purchase(product, type, (result) {
       if (result.isSuccess) {
         var purchasedInfo = result.asSuccess;
         setState(() {
