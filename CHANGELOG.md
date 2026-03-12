@@ -24,8 +24,8 @@
 
 ### Changed
 
-- Update native iOS to [`1.7.0`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.0/CHANGELOG.md)
-- Update native Android to [`1.7.0`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.7.0/CHANGELOG.md)
+- Update native iOS to [`1.7.1`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.1/CHANGELOG.md)
+- Update native Android to [`1.7.1`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.7.1/CHANGELOG.md)
 
 ## [1.6.52] - 2026-02-19
 

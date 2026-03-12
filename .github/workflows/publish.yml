@@ -13,8 +13,7 @@ jobs:
 
     steps:
       - name: Checkout
-        if: false
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Version Tag
         id: version_tag
@@ -33,3 +32,31 @@ jobs:
           release_name: Affise Attribution Flutter Library ${{ github.ref }}
           draft: false
           prerelease: false
+
+      - name: Tg Release failed
+        id: tg_failed
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: |
+            🔴 Flutter ${{ steps.version_tag.outputs.VERSION }} release failed
+
+            [Github Action](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+
+      - name: Tg Release
+        id: tg_success
+        if: ${{ success() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          disable_web_page_preview: true
+          message: |
+            🟢 Flutter ${{ steps.version_tag.outputs.VERSION }} release
+
+            [Changelog](https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/CHANGELOG.md)
