@@ -23,16 +23,20 @@ jobs:
           echo Version: ${GITHUB_REF_NAME}
           echo "VERSION=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
 
-      - uses: dart-lang/setup-dart@v1
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
 
-      # - name: Install dependencies
-      #   run: flutter pub get
+      - name: Setup Flutter SDK
+        uses: flutter-actions/setup-flutter@v4
+
+      - name: Install dependencies
+        run: flutter pub get
 
       - name: Publish - dry run
-        run: dart pub publish --dry-run 
+        run: flutter pub publish --dry-run 
 
       - name: Publish to pub.dev
-        run: dart pub publish --force
+        run: flutter pub publish --force
 
       - name: Release
         if: ${{ !contains(github.event.ref, '-') }}
