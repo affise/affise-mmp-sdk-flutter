@@ -9,6 +9,8 @@ on:
 jobs:
   publish:
     name: Publish Flutter Library
+    permissions:
+      id-token: write # Required for authentication using OIDC
     runs-on: ubuntu-latest
 
     steps:
@@ -20,6 +22,17 @@ jobs:
         run: |
           echo Version: ${GITHUB_REF_NAME}
           echo "VERSION=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+
+      - uses: dart-lang/setup-dart@v1
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Publish - dry run
+        run: dart pub publish --dry-run 
+
+      - name: Publish to pub.dev
+        run: dart pub publish --force
 
       - name: Release
         if: ${{ !contains(github.event.ref, '-') }}

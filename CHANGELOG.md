@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.7.4] - 2026-04-20
+
+### Added
+
+- Android BroadcastReceiver data send
+
+### Fixed
+
+- Fix `Affise.settings.setOnInitSuccess`
+- Fix `Affise.settings.setOnInitError`
+
+### Changed
+
+- Update native iOS to [`1.7.4`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.4/CHANGELOG.md)
+- Update native Android to [`1.7.4`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.7.4/CHANGELOG.md)
+
 ## [1.7.3] - 2026-04-03
 
 ### Fixed
@@ -538,6 +554,7 @@
 - Api `Affise.android.getReferrer` to `Affise.getReferrer`
 - Api `Affise.android.getReferrerValue` to  `Affise.getReferrerValue`
   
+[1.7.4]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.3...1.7.4
 [1.7.3]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.1...1.7.3
 [1.7.1]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.52...1.7.1
 [1.6.52]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.6.51...1.6.52

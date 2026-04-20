@@ -18,6 +18,7 @@
     - [SDK compatibility](#sdk-compatibility)
   - [Integration](#integration)
     - [Integrate as dependency](#integrate-as-dependency)
+    - [Integrate as git dependency](#integrate-as-git-dependency)
     - [Initialize](#initialize)
       - [Initialization callbacks](#initialization-callbacks)
       - [Before application is published](#before-application-is-published)
@@ -127,13 +128,19 @@ Demo App:
 
 ### Integrate as dependency
 
+Add dependency to `pubspec.yaml` in your flutter application
+
+```yaml
+dependencies:
+  affise_attribution_lib: ^1.7.4
+```
+
+### Integrate as git dependency
+
 Add [git](https://github.com/affise/affise-mmp-sdk-flutter) dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  flutter:
-    sdk: flutter
-
   affise_attribution_lib:
     git:
       url: https://github.com/affise/affise-mmp-sdk-flutter
@@ -279,7 +286,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.7.3'
+final affise_version = '1.7.4'
 
 dependencies {
     // Affise modules
@@ -319,7 +326,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.7.3'
+  affise_version = '1.7.4'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules
