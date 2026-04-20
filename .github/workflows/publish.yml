@@ -11,6 +11,7 @@ jobs:
     name: Publish Flutter Library
     permissions:
       id-token: write # Required for authentication using OIDC
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
