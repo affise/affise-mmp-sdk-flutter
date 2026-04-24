@@ -51,13 +51,13 @@ class _AffiseStoreState extends State<AffiseStore> {
           Flexible(
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(.05),
+                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.05),
                 borderRadius: const BorderRadius.all(Radius.circular(8)),
               ),
               child: ListView.separated(
                 shrinkWrap: true,
                 separatorBuilder: (context, index) => Divider(
-                  color: Theme.of(context).colorScheme.onSurface.withOpacity(.1),
+                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: .1),
                   thickness: 2,
                   height: 1,
                 ),

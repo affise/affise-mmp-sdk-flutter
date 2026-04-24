@@ -1,6 +1,6 @@
 name: affise_attribution_lib
-description: Affise Attribution Flutter plugin.
-version: 1.7.4
+description: Affise Attribution Flutter plugin. Use to collect application usage statistics. You can read more about Affise at affise.com.
+version: 1.7.5
 homepage: https://affise.com/
 repository: https://github.com/affise/affise-mmp-sdk-flutter
 issue_tracker: https://github.com/affise/affise-mmp-sdk-flutter/issues
@@ -21,12 +21,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  plugin_platform_interface: ^2.0.2
+  plugin_platform_interface: ^2.1.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^6.0.0
+  lints: ^6.1.0
 
 # The following section is specific to Flutter packages.
 flutter:

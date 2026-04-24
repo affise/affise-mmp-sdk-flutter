@@ -8,7 +8,7 @@ abstract class AffiseAndroid implements AffiseAndroidApi {
 
   AffiseAndroid(this._native);
 
-  /// Erases all user data from mobile and sends [GDPREvent]
+  /// Erases all user data from mobile and sends GDPREvent [userData]
   @override
   void forget(String userData) {
     SchedulerBinding.instance.addPostFrameCallback((_) {

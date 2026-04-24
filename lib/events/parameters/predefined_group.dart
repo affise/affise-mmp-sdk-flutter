@@ -5,7 +5,7 @@ import 'predefined_string.dart';
 
 class PredefinedGroup {
 
-  static String get NAME => "${Predefined.PREFIX}list_group";
+  static const String NAME = "${Predefined.PREFIX}list_group";
 
   /// Event predefined parameters
   final Map<String, dynamic> _predefinedParameters = {};

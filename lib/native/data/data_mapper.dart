@@ -103,15 +103,15 @@ class DataMapper {
     var success = json?[DataName.SUCCESS];
 
     if (error != null) {
-      return AffiseResult.Failure(error.toString());
+      return AffiseResult.failure(error.toString());
     }
 
     var data = transformer(success);
     if (data == null) {
-      return AffiseResult.Failure("$T serialization error. Data: $from");
+      return AffiseResult.failure("$T serialization error. Data: $from");
     }
 
-    return AffiseResult.Success(data);
+    return AffiseResult.success(data);
   }
 
   static AffiseProductsResult? toAffiseProductsResult(dynamic from) {

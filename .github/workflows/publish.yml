@@ -39,18 +39,6 @@ jobs:
       - name: Publish to pub.dev
         run: flutter pub publish --force
 
-      - name: Release
-        if: ${{ !contains(github.event.ref, '-') }}
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Affise Attribution Flutter Library ${{ github.ref }}
-          draft: false
-          prerelease: false
-
       - name: Tg Release failed
         continue-on-error: true
         id: tg_failed
@@ -80,3 +68,16 @@ jobs:
             🟢 Flutter `${{ steps.version_tag.outputs.VERSION }}` release
 
             [Changelog](https://github.com/${{ github.repository }}/blob/${{ github.ref_name }}/CHANGELOG.md)
+
+      - name: Release
+        if: ${{ !contains(github.event.ref, '-') }}
+        id: create_release
+        continue-on-error: true
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Affise Attribution Flutter Library ${{ github.ref }}
+          draft: false
+          prerelease: false

@@ -7,8 +7,8 @@ class AffiseResult<S> {
   bool get isSuccess => this is _AffiseSuccess<S>;
   bool get isFailure => !isSuccess;
 
-  static AffiseResult<T> Success<T>(T value) => _AffiseSuccess<T>(value);
-  static AffiseResult<T> Failure<T>(String error) => _AffiseFailure<T>(error);
+  static AffiseResult<T> success<T>(T value) => _AffiseSuccess<T>(value);
+  static AffiseResult<T> failure<T>(String error) => _AffiseFailure<T>(error);
 }
 
 class _AffiseSuccess<S> extends AffiseResult<S> {

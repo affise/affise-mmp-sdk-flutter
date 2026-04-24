@@ -52,7 +52,7 @@ class Affise {
     });
   }
 
-  /// Send enabled autoCatching [types]
+  // /// Send enabled autoCatching [types]
   // static void setAutoCatchingTypes(List<AutoCatchingType> types) {
   //   SchedulerBinding.instance.addPostFrameCallback((_) {
   //     _native.setAutoCatchingTypes(types);

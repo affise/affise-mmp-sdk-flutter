@@ -1,4 +1,4 @@
 import 'deeplink_value.dart';
 
-/// Signature for [PlatformDispatcher.handleDeeplink].
+/// Signature for handle Deeplink [value].
 typedef OnDeeplinkCallback = void Function(DeeplinkValue value);

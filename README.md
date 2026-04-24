@@ -1,7 +1,7 @@
 # Affise Attribution Flutter Library
 
 [![telegram](https://badges.ws/badge/Affise%20channel-08c?icon=telegram)](https://t.me/AffiseChangelog)
-[![latest release](https://badges.ws/github/release/affise/affise-mmp-sdk-flutter)]((https://github.com/affise/affise-mmp-sdk-flutter/releases/latest))
+[![latest release](https://badges.ws/pub/v/affise_attribution_lib)](https://pub.dev/packages/affise_attribution_lib)
 ![license](https://badges.ws/github/l/affise/affise-mmp-sdk-flutter)
 ![repo size](https://badges.ws/github/repo-size/affise/affise-mmp-sdk-flutter)
 ![last commit](https://badges.ws/github/last-commit/affise/affise-mmp-sdk-flutter)
@@ -10,7 +10,7 @@
 
 | Package                  |                         Version                          |
 |--------------------------|:--------------------------------------------------------:|
-| `affise_attribution_lib` | [![latest release](https://badges.ws/github/release/affise/affise-mmp-sdk-flutter)](https://github.com/affise/sdk-react/releases) |
+| `affise_attribution_lib` | [![latest release](https://badges.ws/pub/v/affise_attribution_lib)](https://pub.dev/packages/affise_attribution_lib) |
 
 - [Affise Attribution Flutter Library](#affise-attribution-flutter-library)
 - [Description](#description)
@@ -128,11 +128,17 @@ Demo App:
 
 ### Integrate as dependency
 
-Add dependency to `pubspec.yaml` in your flutter application
+Run console command
+
+```console
+flutter pub add affise_attribution_lib
+```
+
+or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.4
+  affise_attribution_lib: ^1.7.5
 ```
 
 ### Integrate as git dependency
@@ -229,7 +235,7 @@ Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 ```groovy
 android {
   defaultConfig {
-    minSdkVersion Math.max(flutter.minSdkVersion, 21)
+    minSdkVersion Math.max(flutter.minSdkVersion, 24)
   }
 }
 ```
@@ -286,7 +292,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.7.4'
+final affise_version = '1.7.5'
 
 dependencies {
     // Affise modules
@@ -326,7 +332,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.7.4'
+  affise_version = '1.7.5'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules

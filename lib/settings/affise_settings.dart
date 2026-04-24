@@ -56,13 +56,13 @@ class AffiseSettings {
     return this;
   }
 
-  /// Set [autoCatchingClickEvents] list of AutoCatchingType
+  // /// Set [autoCatchingClickEvents] list of AutoCatchingType
   // AffiseSettings setAutoCatchingClickEvents(List<AutoCatchingType>? autoCatchingClickEvents) {
   //   _autoCatchingClickEvents = autoCatchingClickEvents;
   //   return this;
   // }
 
-  /// Set Metrics [enable]
+  // /// Set Metrics [enable]
   // AffiseSettings setEnabledMetrics(bool enable) {
   //   _enabledMetrics = enable;
   //   return this;
