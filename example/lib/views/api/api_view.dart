@@ -1,20 +1,20 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import '../components/affise_button.dart';
-import '../components/show_alert.dart';
-import 'factories/api_factory.dart';
+import '../../components/affise_button.dart';
+import '../../components/show_alert.dart';
+import '../../factories/api_factory.dart';
 
-class AffiseApiWidget extends StatefulWidget {
+class ApiView extends StatefulWidget {
   final ValueNotifier<String> output;
 
-  const AffiseApiWidget(this.output, {super.key});
+  const ApiView(this.output, {super.key});
 
   @override
-  State<StatefulWidget> createState() => _AffiseApiWidgetState();
+  State<StatefulWidget> createState() => _ApiViewState();
 }
 
-class _AffiseApiWidgetState extends State<AffiseApiWidget> {
+class _ApiViewState extends State<ApiView> {
   TextEditingController output = TextEditingController();
   ApiFactory factory = ApiFactory();
   Map<String, Function> apis = {};
@@ -80,7 +80,7 @@ class _AffiseApiWidgetState extends State<AffiseApiWidget> {
               ),
               suffixIcon: IconButton(
                 onPressed: () {
-                    output.clear();
+                  output.clear();
                 },
                 icon: Icon(
                   Icons.clear,

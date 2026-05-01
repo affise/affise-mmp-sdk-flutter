@@ -1,7 +1,7 @@
 import 'coarse_value.dart';
 
 class SKAdNetwork {
-  static SKAdNetwork get CoarseConversionValue { return SKAdNetwork._(); }
+  static SKAdNetwork get coarseConversionValue { return SKAdNetwork._(); }
 
   SKAdNetwork._();
 

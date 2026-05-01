@@ -5,11 +5,11 @@ import '../../components/affise_button.dart';
 import '../../components/product_view.dart';
 import '../../components/show_alert.dart';
 
-class AffiseStore extends StatefulWidget {
-  const AffiseStore({super.key});
+class StoreView extends StatefulWidget {
+  const StoreView({super.key});
 
   @override
-  State<StatefulWidget> createState() => _AffiseStoreState();
+  State<StatefulWidget> createState() => _StoreViewState();
 }
 
 // Product Id and corresponding product type
@@ -23,8 +23,7 @@ const storeData = <String, AffiseProductType>{
   "com.test.sub_3": AffiseProductType.RENEWABLE_SUBSCRIPTION,
 };
 
-
-class _AffiseStoreState extends State<AffiseStore> {
+class _StoreViewState extends State<StoreView> {
   List<String> invalidIds = [];
   List<AffiseProduct> products = [];
 
@@ -51,13 +50,19 @@ class _AffiseStoreState extends State<AffiseStore> {
           Flexible(
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.05),
+                color: Theme.of(context)
+                    .colorScheme
+                    .onSurface
+                    .withValues(alpha: 0.05),
                 borderRadius: const BorderRadius.all(Radius.circular(8)),
               ),
               child: ListView.separated(
                 shrinkWrap: true,
                 separatorBuilder: (context, index) => Divider(
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: .1),
+                  color: Theme.of(context)
+                      .colorScheme
+                      .onSurface
+                      .withValues(alpha: .1),
                   thickness: 2,
                   height: 1,
                 ),
@@ -67,9 +72,9 @@ class _AffiseStoreState extends State<AffiseStore> {
                     products[index],
                     onBuy: (product) {
                       purchase(
-                        product,
-                        storeData[product.productId] ?? AffiseProductType.CONSUMABLE
-                      );
+                          product,
+                          storeData[product.productId] ??
+                              AffiseProductType.CONSUMABLE);
                     },
                   );
                 },
@@ -106,7 +111,9 @@ class _AffiseStoreState extends State<AffiseStore> {
         setState(() {
           alert(
               title: "Purchased",
-              text: purchasedInfo.product?.title ?? purchasedInfo.purchase ?? "$product");
+              text: purchasedInfo.product?.title ??
+                  purchasedInfo.purchase ??
+                  "$product");
         });
       } else {
         alert(title: "Error", text: result.asFailure);

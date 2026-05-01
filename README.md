@@ -844,7 +844,7 @@ AddToCartEvent()
 AddToCartEvent()
     .sendNow(() {
       // handle event send success
-    }, (status) {
+    }, (errorResponse) {
       // handle event send failed
       // 🟥Warning🟥: event is NOT cached for later send
     });
@@ -1764,7 +1764,7 @@ Updates the fine and coarse conversion values, and calls a completion handler if
 Second argument coarseValue is available in iOS 16.1+
 
 ```dart
-Affise.ios.updatePostbackConversionValue(1, SKAdNetwork.CoarseConversionValue.medium, (error) { 
+Affise.ios.updatePostbackConversionValue(1, SKAdNetwork.coarseConversionValue.medium, (error) { 
   // Handle error
 });
 ```

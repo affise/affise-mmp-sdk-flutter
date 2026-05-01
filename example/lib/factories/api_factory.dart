@@ -87,7 +87,7 @@ class ApiFactory {
       "iOS: SKAd update": () {
         // StoreKit Ad Network https://github.com/affise/affise-mmp-sdk-flutter#storekit-ad-network
         Affise.ios.updatePostbackConversionValue(
-            1, SKAdNetwork.CoarseConversionValue.medium, (error) {
+            1, SKAdNetwork.coarseConversionValue.medium, (error) {
           output?.call("SKAd update: $error");
         });
       },

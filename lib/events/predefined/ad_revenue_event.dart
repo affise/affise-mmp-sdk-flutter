@@ -6,6 +6,7 @@ import '../event_name.dart';
 /// @property userData any custom string data.
 /// @property timeStampMillis the timestamp event in milliseconds.
 class AdRevenueEvent extends NativeEvent {
+  
   AdRevenueEvent({
     super.userData,
     super.timeStampMillis,

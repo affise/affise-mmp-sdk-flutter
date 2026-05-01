@@ -2,10 +2,9 @@ import 'package:affise_attribution_lib/affise.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'affise/affise_api_widget.dart';
-import 'affise/store/affise_store.dart';
-import 'affise/affise_widget.dart';
 import 'components/show_alert.dart';
+import 'settings/app_settings.dart';
+import 'views/main_view.dart';
 
 void main() {
   runApp(
@@ -44,20 +43,23 @@ class _MyAppState extends State<MyApp> {
   }
 
   void initAffise() async {
+    final settings = await AppSettings.load();
+
     // Initialize https://github.com/affise/affise-mmp-sdk-flutter#initialize
-    Affise
-        .settings(
-          affiseAppId: "129", //Change to your app id
-          secretKey: "93a40b54-6f12-443f-a250-ebf67c5ee4d2", //Change to your SDK key
-        )
-        .setConfigValue(AffiseConfig.FB_APP_ID, "1111111111111111")
-        .setProduction(false) //To enable debug methods set Production to false
+    Affise.settings(
+      affiseAppId: settings.affiseAppId,
+      secretKey: settings.secretKey,
+    )
+        .setConfigValue(AffiseConfig.FB_APP_ID, settings.fbAppId)
+        // To enable debug methods set Production to false
+        .setProduction(settings.production)
+        .setDomain(settings.domain)
         .setDisableModules([
           // Exclude modules from start
           AffiseModules.ADVERTISING,
           AffiseModules.PERSISTENT,
         ])
-        .setOnInitSuccess(() { 
+        .setOnInitSuccess(() {
           // Called if library initialization succeeded
           if (kDebugMode) {
             print("Affise: init success");
@@ -87,8 +89,12 @@ class _MyAppState extends State<MyApp> {
     // Debug: network request/response
     Affise.debug.network((request, response) {
       if (kDebugMode) {
-        // print("Affise: $request");
-        print("Affise: $response");
+        if (settings.debugRequest) {
+          print("Affise: $request");
+        }
+        if (settings.debugResponse) {
+          print("Affise: $response");
+        }
       }
     });
 
@@ -103,57 +109,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-          title: TabBar(
-            labelColor: Theme.of(context).colorScheme.primary,
-            indicatorColor: Theme.of(context).colorScheme.primary,
-            tabs: const [
-              Tab(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.swap_horiz),
-                    SizedBox(width: 8),
-                    Text('API'),
-                  ],
-                ),
-              ),
-              Tab(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.file_upload),
-                    SizedBox(width: 8),
-                    Text('Events'),
-                  ],
-                ),
-              ),
-              Tab(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.store),
-                    SizedBox(width: 8),
-                    Text('Store'),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-        body: SafeArea(
-          child: TabBarView(
-            children: [
-              AffiseApiWidget(output),
-              const AffiseWidget(),
-              const AffiseStore(),
-            ],
-          ),
-        ),
-      ),
-    );
+    return MainView(output);
   }
 }
