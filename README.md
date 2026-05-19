@@ -24,11 +24,11 @@
       - [Before application is published](#before-application-is-published)
       - [Domain](#domain)
     - [Requirements](#requirements)
-      - [Android](#android-1)
-      - [iOS](#ios-1)
-    - [Modules](#modules)
       - [Android](#android)
       - [iOS](#ios)
+    - [Modules](#modules)
+      - [Android](#android-1)
+      - [iOS](#ios-1)
       - [Installed active modules](#installed-active-modules)
       - [Manual exclude modules](#manual-exclude-modules)
       - [Module AdService](#module-adservice)
@@ -47,6 +47,7 @@
 - [Features](#features)
   - [ProviderType identifiers collection](#providertype-identifiers-collection)
     - [Attribution](#attribution)
+    - [AdService](#adservice)
     - [Advertising](#advertising)
     - [AndroidId](#androidid)
     - [Huawei](#huawei)
@@ -87,7 +88,7 @@
   - [Disable tracking](#disable-tracking)
   - [Disable background tracking](#disable-background-tracking)
   - [Get random user Id](#get-random-user-id)
-  - [Get Affice device Id](#get-Affice-device-id)
+  - [Get Affice device Id](#get-affice-device-id)
   - [Get providers](#get-providers)
   - [Is first run](#is-first-run)
   - [Get referrer](#get-referrer)
@@ -138,7 +139,7 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.6
+  affise_attribution_lib: ^1.7.7
 ```
 
 ### Integrate as git dependency
@@ -292,7 +293,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.7.6'
+final affise_version = '1.7.7'
 
 dependencies {
     // Affise modules
@@ -332,7 +333,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.7.6'
+  affise_version = '1.7.7'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules
@@ -787,6 +788,7 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `AFFISE_INTERNAL_EVENTS_COUNT`
 - `IS_ROOTED`
 - `IS_EMULATOR`
+- `IDFV`
 
 ### AdService
 

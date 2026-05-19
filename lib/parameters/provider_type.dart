@@ -83,6 +83,7 @@ enum ProviderType {
   AFFISE_INTERNAL_EVENTS_COUNT,
   IS_ROOTED,
   IS_EMULATOR,
+  IDFV,
 
   // advertising
   GAID_ADID,
@@ -281,6 +282,8 @@ extension ProviderTypeExt on ProviderType {
         return "is_rooted";
       case ProviderType.IS_EMULATOR:
         return "is_emulator";
+      case ProviderType.IDFV:
+        return "idfv";
 
       // advertising
       case ProviderType.GAID_ADID:
