@@ -139,7 +139,7 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.7
+  affise_attribution_lib: ^1.7.8
 ```
 
 ### Integrate as git dependency
@@ -293,7 +293,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.7.7'
+final affise_version = '1.7.8'
 
 dependencies {
     // Affise modules
@@ -321,6 +321,7 @@ Add modules to iOS project
 | `ADSERVICE`    | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `ADVERTISING`  | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `APPSFLYER`    | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `GOOGLE`       | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `LINK`         | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `PERSISTENT`   | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `STATUS`       | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
@@ -333,7 +334,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.7.7'
+  affise_version = '1.7.8'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules
@@ -344,6 +345,7 @@ target 'Runner' do
   pod 'AffiseModule/Status', affise_version
 #  pod 'AffiseModule/Subscription', affise_version
 #  pod 'AffiseModule/AppsFlyer', affise_version
+#  pod 'AffiseModule/Google', affise_version
 #  pod 'AffiseModule/TikTok', affise_version
 end
 ```
@@ -812,6 +814,10 @@ To match users with events and data library is sending, these `ProviderType` ide
 
 - `OAID`
 - `OAID_MD5`
+
+### Google
+
+- `ODM_INFO`
 
 ### Meta
 

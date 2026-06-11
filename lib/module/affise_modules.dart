@@ -5,6 +5,7 @@ enum AffiseModules {
   ADVERTISING,
   ANDROIDID,
   APPSFLYER,
+  GOOGLE,
   LINK,
   META,
   NETWORK,
@@ -33,6 +34,8 @@ extension AffiseModulesExt on AffiseModules {
         return "AndroidId";
       case AffiseModules.APPSFLYER:
         return "AppsFlyer";
+      case AffiseModules.GOOGLE:
+        return "Google";
       case AffiseModules.LINK:
         return "Link";
       case AffiseModules.META:

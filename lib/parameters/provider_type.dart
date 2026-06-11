@@ -95,6 +95,9 @@ enum ProviderType {
   FIREOS_ADID,
   COLOROS_ADID,
 
+  // google
+  ODM_INFO,
+
   // meta
   META,
 
@@ -302,6 +305,10 @@ extension ProviderTypeExt on ProviderType {
         return "fireos_adid";
       case ProviderType.COLOROS_ADID:
         return "coloros_adid";
+
+      // google
+      case ProviderType.ODM_INFO:
+        return "odm_info";
 
       // meta
       case ProviderType.META:
