@@ -53,6 +53,12 @@ enum ProviderType {
   LANGUAGE,
   DEVICE_NAME,
   DEVICE_TYPE,
+  SCREEN_WIDTH,
+  SCREEN_HEIGHT,
+  DENSITY,
+  CPU_CORES,
+  TOTAL_DISK,
+  FREE_DISK,
   OS_NAME,
   PLATFORM,
   SDK_PLATFORM,
@@ -94,6 +100,9 @@ enum ProviderType {
   ALTSTR_ADID,
   FIREOS_ADID,
   COLOROS_ADID,
+  AD_PERSONALIZATION,
+  ADVERTISER_TRACKING_ENABLED,
+  APPLICATION_TRACKING_ENABLED,
 
   // google
   ODM_INFO,
@@ -225,6 +234,18 @@ extension ProviderTypeExt on ProviderType {
         return "device_name";
       case ProviderType.DEVICE_TYPE:
         return "device_type";
+      case ProviderType.SCREEN_WIDTH:
+        return "screen_width";
+      case ProviderType.SCREEN_HEIGHT:
+        return "screen_height";
+      case ProviderType.DENSITY:
+        return "density";
+      case ProviderType.CPU_CORES:
+        return "cpu_cores";
+      case ProviderType.TOTAL_DISK:
+        return "total_disk";
+      case ProviderType.FREE_DISK:
+        return "free_disk";
       case ProviderType.OS_NAME:
         return "os_name";
       case ProviderType.PLATFORM:
@@ -305,6 +326,12 @@ extension ProviderTypeExt on ProviderType {
         return "fireos_adid";
       case ProviderType.COLOROS_ADID:
         return "coloros_adid";
+      case ProviderType.AD_PERSONALIZATION:
+        return "ad_personalization";
+      case ProviderType.ADVERTISER_TRACKING_ENABLED:
+        return "advertiser_tracking_enabled";
+      case ProviderType.APPLICATION_TRACKING_ENABLED:
+        return "application_tracking_enabled";
 
       // google
       case ProviderType.ODM_INFO:

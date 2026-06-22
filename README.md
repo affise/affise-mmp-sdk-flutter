@@ -51,6 +51,7 @@
     - [Advertising](#advertising)
     - [AndroidId](#androidid)
     - [Huawei](#huawei)
+    - [Google](#google)
     - [Meta](#meta)
     - [Network](#network)
     - [Phone](#phone)
@@ -139,7 +140,7 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.8
+  affise_attribution_lib: ^1.7.9
 ```
 
 ### Integrate as git dependency
@@ -293,7 +294,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.7.8'
+final affise_version = '1.7.9'
 
 dependencies {
     // Affise modules
@@ -334,7 +335,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.7.8'
+  affise_version = '1.7.9'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules
@@ -759,6 +760,12 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `LANGUAGE`
 - `DEVICE_NAME`
 - `DEVICE_TYPE`
+- `SCREEN_WIDTH`
+- `SCREEN_HEIGHT`
+- `DENSITY`
+- `CPU_CORES`
+- `TOTAL_DISK`
+- `FREE_DISK`
 - `OS_NAME`
 - `PLATFORM`
 - `SDK_PLATFORM`
@@ -804,6 +811,9 @@ To match users with events and data library is sending, these `ProviderType` ide
 - `ALTSTR_ADID`
 - `FIREOS_ADID`
 - `COLOROS_ADID`
+- `AD_PERSONALIZATION`
+- `ADVERTISER_TRACKING_ENABLED`
+- `APPLICATION_TRACKING_ENABLED`
 
 ### AndroidId
 
