@@ -29,7 +29,7 @@ abstract class AffiseDebug implements AffiseDebugApi {
   /// Debug get version of flutter library
   @override
   String version() {
-    return "1.7.10";
+    return "1.7.11";
   }
 
   /// Debug get version of native library Android/iOS

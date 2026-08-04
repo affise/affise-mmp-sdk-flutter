@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'affise_attribution_lib'
-  s.version          = '1.7.10'
+  s.version          = '1.7.11'
   s.summary          = 'Affise Attribution Flutter plugin.'
   s.description      = <<-DESC
 Affise Attribution Flutter plugin.
@@ -22,6 +22,6 @@ Affise Attribution Flutter plugin.
   s.swift_version = '5.0'
 
   s.dependency 'Flutter'
-  s.dependency 'AffiseInternal', '1.7.10'
+  s.dependency 'AffiseInternal', '1.7.11'
 
 end
