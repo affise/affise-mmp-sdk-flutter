@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'affise_attribution_lib'
-  s.version          = '1.7.11'
+  s.version          = '1.7.12'
   s.summary          = 'Affise Attribution Flutter plugin.'
   s.description      = <<-DESC
 Affise Attribution Flutter plugin.
@@ -13,7 +13,7 @@ Affise Attribution Flutter plugin.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'affise' => 'support@affise.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'affise_attribution_lib/Sources/affise_attribution_lib/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '12.0'
 
@@ -22,6 +22,6 @@ Affise Attribution Flutter plugin.
   s.swift_version = '5.0'
 
   s.dependency 'Flutter'
-  s.dependency 'AffiseInternal', '1.7.11'
+  s.dependency 'AffiseInternal', '1.7.12'
 
 end

@@ -140,7 +140,7 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.11
+  affise_attribution_lib: ^1.7.12
 ```
 
 ### Integrate as git dependency
@@ -294,7 +294,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.7.11'
+final affise_version = '1.7.12'
 
 dependencies {
     // Affise modules
@@ -335,7 +335,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.7.11'
+  affise_version = '1.7.12'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules
