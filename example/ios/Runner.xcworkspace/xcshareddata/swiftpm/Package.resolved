@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/affise/affise-mmp-sdk-ios.git",
       "state" : {
-        "revision" : "f7ef8252f0666c254546d76b484427949724551f",
-        "version" : "1.7.12"
+        "revision" : "1af25c899b3e5b7aa411cd0a38cf9b3051139beb",
+        "version" : "1.7.13"
       }
     },
     {

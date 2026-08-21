@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "FlutterFramework", path: "../FlutterFramework"),
-        .package(url: "https://github.com/affise/affise-mmp-sdk-ios.git", exact: "1.7.12")
+        .package(url: "https://github.com/affise/affise-mmp-sdk-ios.git", exact: "1.7.13")
     ],
     targets: [
         .target(
