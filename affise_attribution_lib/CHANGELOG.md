@@ -5,8 +5,8 @@
 ### Added
 
 - Flutter package for native Affise module `Advertising` 
-- Advertising module wrapper `com.affise:module-advertising` for Android
-- Advertising module wrapper `AffiseModule/Advertising` for iOS
+- Advertising module wrapper `com.affise:module-advertising` for Android.
+- Advertising module wrapper `AffiseModule/Advertising` for iOS.
 
 ### Changed
 

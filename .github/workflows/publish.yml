@@ -30,13 +30,31 @@ jobs:
       - name: Setup Flutter SDK
         uses: flutter-actions/setup-flutter@v4
 
-      - name: Install dependencies
+      # Dependencies
+      - name: Install Affise Attribution Lib dependencies
+        working-directory: affise_attribution_lib
         run: flutter pub get
 
-      - name: Publish - dry run
+      - name: Install Affise Attribution Advertising Module dependencies
+        working-directory: affise_attribution_module_advertising
+        run: flutter pub get
+
+      # Dry Run
+      - name: Publish Affise Attribution Lib - dry run
+        working-directory: affise_attribution_lib
+        run: flutter pub publish --dry-run
+
+      - name: Publish Affise Attribution Advertising Module - dry run
+        working-directory: affise_attribution_module_advertising
         run: flutter pub publish --dry-run 
 
-      - name: Publish to pub.dev
+      # Publish
+      - name: Publish Affise Attribution Lib to pub.dev
+        working-directory: affise_attribution_lib
+        run: flutter pub publish --force
+
+      - name: Publish Affise Attribution Advertising Module to pub.dev
+        working-directory: affise_attribution_module_advertising
         run: flutter pub publish --force
 
       - name: Tg Release failed
