@@ -1,10 +1,51 @@
 # Changelog
 
+## [1.7.15] - 2026-09-11
+
+### Added
+
+- Flutter package for native Affise module `affise_attribution_module_adservice`
+- AdService module wrapper `AffiseModule/AdService` for iOS.
+- Flutter package for native Affise module `affise_attribution_module_appsflyer`
+- AppsFlyer module wrapper `com.affise:module-appsflyer` for Android.
+- AppsFlyer module wrapper `AffiseModule/AppsFlyer` for iOS.
+- Flutter package for native Affise module `affise_attribution_module_google`
+- Google module wrapper `AffiseModule/Google` for iOS.
+- Flutter package for native Affise module `affise_attribution_module_huawei`
+- Huawei module wrapper `com.affise:module-huawei` for Android.
+- Flutter package for native Affise module `affise_attribution_module_link`
+- Link module wrapper `com.affise:module-link` for Android.
+- Link module wrapper `AffiseModule/Link` for iOS.
+- Flutter package for native Affise module `affise_attribution_module_meta`
+- Meta module wrapper `com.affise:module-meta` for Android.
+- Flutter package for native Affise module `affise_attribution_module_network`
+- Network module wrapper `com.affise:module-network` for Android.
+- Flutter package for native Affise module `affise_attribution_module_persistent`
+- Persistent module wrapper `AffiseModule/Persistent` for iOS.
+- Flutter package for native Affise module `affise_attribution_module_phone`
+- Phone module wrapper `com.affise:module-phone` for Android.
+- Flutter package for native Affise module `affise_attribution_module_rustore`
+- RuStore module wrapper `com.affise:module-rustore` for Android.
+- Flutter package for native Affise module `affise_attribution_module_status`
+- Status module wrapper `com.affise:module-status` for Android.
+- Status module wrapper `AffiseModule/Status` for iOS.
+- Flutter package for native Affise module `affise_attribution_module_subscription`
+- Subscription module wrapper `com.affise:module-subscription` for Android.
+- Subscription module wrapper `AffiseModule/Subscription` for iOS.
+- Flutter package for native Affise module `affise_attribution_module_tiktok`
+- TikTok module wrapper `com.affise:module-tiktok` for Android.
+- TikTok module wrapper `AffiseModule/TikTok` for iOS.
+
+### Changed
+
+- Update native iOS to [`1.7.15`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.15/CHANGELOG.md)
+- Update native Android to [`1.7.15`](https://github.com/affise/affise-mmp-sdk-android/blob/v1.7.15/CHANGELOG.md)
+
 ## [1.7.14] - 2026-09-01
 
 ### Added
 
-- Flutter package for native Affise module `Advertising` 
+- Flutter package for native Affise module `affise_attribution_module_advertising` 
 - Advertising module wrapper `com.affise:module-advertising` for Android.
 - Advertising module wrapper `AffiseModule/Advertising` for iOS.
 
@@ -661,6 +702,7 @@
 - Api `Affise.android.getReferrer` to `Affise.getReferrer`
 - Api `Affise.android.getReferrerValue` to  `Affise.getReferrerValue`
   
+[1.7.15]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.14...1.7.15
 [1.7.14]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.13...1.7.14
 [1.7.13]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.12...1.7.13
 [1.7.12]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.11...1.7.12

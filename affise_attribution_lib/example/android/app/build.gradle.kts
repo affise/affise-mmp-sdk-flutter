@@ -42,18 +42,19 @@ flutter {
 }
 
 dependencies {
-    val affise_version = "1.7.14"
+    // // Manual dependencies. Use Flutter dependencies
+    // val affise_version = "1.7.15"
 
-    // Affise modules
-    implementation("com.affise:module-androidid:$affise_version")
-    implementation("com.affise:module-link:$affise_version")
-    implementation("com.affise:module-network:$affise_version")
-    implementation("com.affise:module-phone:$affise_version")
-    implementation("com.affise:module-status:$affise_version")
-    implementation("com.affise:module-subscription:$affise_version")
-    implementation("com.affise:module-meta:$affise_version")
-    implementation("com.affise:module-appsflyer:$affise_version")
-    // implementation("com.affise:module-rustore:$affise_version")
-    // implementation("com.affise:module-huawei:$affise_version")
-    // implementation("com.affise:module-tiktok:$affise_version")
+    // // Affise modules
+    // implementation("com.affise:module-androidid:$affise_version")
+    // implementation("com.affise:module-link:$affise_version")
+    // implementation("com.affise:module-network:$affise_version")
+    // implementation("com.affise:module-phone:$affise_version")
+    // implementation("com.affise:module-status:$affise_version")
+    // implementation("com.affise:module-subscription:$affise_version")
+    // implementation("com.affise:module-meta:$affise_version")
+    // implementation("com.affise:module-appsflyer:$affise_version")
+    // // implementation("com.affise:module-rustore:$affise_version")
+    // // implementation("com.affise:module-huawei:$affise_version")
+    // // implementation("com.affise:module-tiktok:$affise_version")
 }

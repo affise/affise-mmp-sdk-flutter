@@ -1,5 +1,5 @@
 group = "com.affise.affise_attribution_module_advertising"
-version = "1.7.14"
+version = "1.7.15"
 
 buildscript {
     val kotlinVersion = "2.2.20"
@@ -71,7 +71,7 @@ android {
 }
 
 dependencies {
-    implementation("com.affise:module-advertising:1.7.14")
+    implementation("com.affise:module-advertising:1.7.15")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.mockito:mockito-core:5.0.0")

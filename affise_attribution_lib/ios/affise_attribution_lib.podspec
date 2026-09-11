@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'affise_attribution_lib'
-  s.version          = '1.7.14'
+  s.version          = '1.7.15'
   s.summary          = 'Affise Attribution Flutter plugin.'
   s.description      = <<-DESC
 Affise Attribution Flutter plugin.
@@ -21,7 +21,6 @@ Affise Attribution Flutter plugin.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
 
-  s.dependency 'Flutter'
-  s.dependency 'AffiseInternal', '1.7.14'
+  s.dependency 'AffiseInternal', '1.7.15'
 
 end

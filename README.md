@@ -8,9 +8,24 @@
 
 [![Change Log](https://badges.ws/badge/Change%20Log?icon=flutter)](CHANGELOG.md)
 
-| Package                  |                         Version                          |
-|--------------------------|:--------------------------------------------------------:|
-| `affise_attribution_lib` | [![latest release](https://badges.ws/pub/v/affise_attribution_lib)](https://pub.dev/packages/affise_attribution_lib) |
+| Package                                      |                                                        Version                                                        |
+|----------------------------------------------|:---------------------------------------------------------------------------------------------------------------------:|
+| `affise_attribution_lib`                     | [![latest release](https://badges.ws/pub/v/affise_attribution_lib)](https://pub.dev/packages/affise_attribution_lib)                     |
+| `affise_attribution_module_adservice`        | [![latest release](https://badges.ws/pub/v/affise_attribution_module_adservice)](https://pub.dev/packages/affise_attribution_module_adservice)         |
+| `affise_attribution_module_advertising`      | [![latest release](https://badges.ws/pub/v/affise_attribution_module_advertising)](https://pub.dev/packages/affise_attribution_module_advertising)       |
+| `affise_attribution_module_androidid`        | [![latest release](https://badges.ws/pub/v/affise_attribution_module_androidid)](https://pub.dev/packages/affise_attribution_module_androidid)         |
+| `affise_attribution_module_appsflyer`        | [![latest release](https://badges.ws/pub/v/affise_attribution_module_appsflyer)](https://pub.dev/packages/affise_attribution_module_appsflyer)         |
+| `affise_attribution_module_google`           | [![latest release](https://badges.ws/pub/v/affise_attribution_module_google)](https://pub.dev/packages/affise_attribution_module_google)            |
+| `affise_attribution_module_huawei`           | [![latest release](https://badges.ws/pub/v/affise_attribution_module_huawei)](https://pub.dev/packages/affise_attribution_module_huawei)            |
+| `affise_attribution_module_link`             | [![latest release](https://badges.ws/pub/v/affise_attribution_module_link)](https://pub.dev/packages/affise_attribution_module_link)              |
+| `affise_attribution_module_meta`             | [![latest release](https://badges.ws/pub/v/affise_attribution_module_meta)](https://pub.dev/packages/affise_attribution_module_meta)              |
+| `affise_attribution_module_network`          | [![latest release](https://badges.ws/pub/v/affise_attribution_module_network)](https://pub.dev/packages/affise_attribution_module_network)           |
+| `affise_attribution_module_persistent`       | [![latest release](https://badges.ws/pub/v/affise_attribution_module_persistent)](https://pub.dev/packages/affise_attribution_module_persistent)        |
+| `affise_attribution_module_phone`            | [![latest release](https://badges.ws/pub/v/affise_attribution_module_phone)](https://pub.dev/packages/affise_attribution_module_phone)             |
+| `affise_attribution_module_rustore`          | [![latest release](https://badges.ws/pub/v/affise_attribution_module_rustore)](https://pub.dev/packages/affise_attribution_module_rustore)           |
+| `affise_attribution_module_status`           | [![latest release](https://badges.ws/pub/v/affise_attribution_module_status)](https://pub.dev/packages/affise_attribution_module_status)            |
+| `affise_attribution_module_subscription`     | [![latest release](https://badges.ws/pub/v/affise_attribution_module_subscription)](https://pub.dev/packages/affise_attribution_module_subscription)      |
+| `affise_attribution_module_tiktok`           | [![latest release](https://badges.ws/pub/v/affise_attribution_module_tiktok)](https://pub.dev/packages/affise_attribution_module_tiktok)            |
 
 - [Affise Attribution Flutter Library](#affise-attribution-flutter-library)
 - [Description](#description)
@@ -27,8 +42,10 @@
       - [Android](#android)
       - [iOS](#ios)
     - [Modules](#modules)
-      - [Android](#android-1)
-      - [iOS](#ios-1)
+      - [Flutter](#flutter)
+      - [Native](#native)
+        - [Android](#android-1)
+        - [iOS](#ios-1)
       - [Installed active modules](#installed-active-modules)
       - [Manual exclude modules](#manual-exclude-modules)
       - [Module AdService](#module-adservice)
@@ -70,7 +87,7 @@
   - [Open Advertising Identifier (huawei) tracking](#open-advertising-identifier-huawei-tracking)
   - [Install referrer tracking](#install-referrer-tracking)
   - [Push token tracking](#push-token-tracking)
-    - [Native](#native)
+    - [Native](#native-1)
       - [iOS APNs](#ios-apns)
     - [Firebase Flutter Plugin](#firebase-flutter-plugin)
       - [iOS APNs](#ios-apns-1)
@@ -140,7 +157,7 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.14
+  affise_attribution_lib: ^1.7.15
 ```
 
 ### Integrate as git dependency
@@ -272,7 +289,74 @@ Example [`info.plist`](example/ios/Runner/Info.plist):
 
 ### Modules
 
-#### Android
+#### Flutter
+
+| Package                                      | Version | Android | iOS |
+|----------------------------------------------|:-------:|:-------:|:---:|
+| `affise_attribution_module_adservice`        | [![latest release](https://badges.ws/pub/v/affise_attribution_module_adservice)](https://pub.dev/packages/affise_attribution_module_adservice) | ❌ | ✅ |
+| `affise_attribution_module_advertising`      | [![latest release](https://badges.ws/pub/v/affise_attribution_module_advertising)](https://pub.dev/packages/affise_attribution_module_advertising) | ✅ | ✅ |
+| `affise_attribution_module_androidid`        | [![latest release](https://badges.ws/pub/v/affise_attribution_module_androidid)](https://pub.dev/packages/affise_attribution_module_androidid) | ✅ | ❌ |
+| `affise_attribution_module_appsflyer`        | [![latest release](https://badges.ws/pub/v/affise_attribution_module_appsflyer)](https://pub.dev/packages/affise_attribution_module_appsflyer) | ✅ | ✅ |
+| `affise_attribution_module_google`           | [![latest release](https://badges.ws/pub/v/affise_attribution_module_google)](https://pub.dev/packages/affise_attribution_module_google) | ❌ | ✅ |
+| `affise_attribution_module_huawei`           | [![latest release](https://badges.ws/pub/v/affise_attribution_module_huawei)](https://pub.dev/packages/affise_attribution_module_huawei) | ✅ | ❌ |
+| `affise_attribution_module_link`             | [![latest release](https://badges.ws/pub/v/affise_attribution_module_link)](https://pub.dev/packages/affise_attribution_module_link) | ✅ | ✅ |
+| `affise_attribution_module_meta`             | [![latest release](https://badges.ws/pub/v/affise_attribution_module_meta)](https://pub.dev/packages/affise_attribution_module_meta) | ✅ | ❌ |
+| `affise_attribution_module_network`          | [![latest release](https://badges.ws/pub/v/affise_attribution_module_network)](https://pub.dev/packages/affise_attribution_module_network) | ✅ | ❌ |
+| `affise_attribution_module_persistent`       | [![latest release](https://badges.ws/pub/v/affise_attribution_module_persistent)](https://pub.dev/packages/affise_attribution_module_persistent) | ❌ | ✅ |
+| `affise_attribution_module_phone`            | [![latest release](https://badges.ws/pub/v/affise_attribution_module_phone)](https://pub.dev/packages/affise_attribution_module_phone) | ✅ | ❌ |
+| `affise_attribution_module_rustore`          | [![latest release](https://badges.ws/pub/v/affise_attribution_module_rustore)](https://pub.dev/packages/affise_attribution_module_rustore) | ✅ | ❌ |
+| `affise_attribution_module_status`           | [![latest release](https://badges.ws/pub/v/affise_attribution_module_status)](https://pub.dev/packages/affise_attribution_module_status) | ✅ | ✅ |
+| `affise_attribution_module_subscription`     | [![latest release](https://badges.ws/pub/v/affise_attribution_module_subscription)](https://pub.dev/packages/affise_attribution_module_subscription) | ✅ | ✅ |
+| `affise_attribution_module_tiktok`           | [![latest release](https://badges.ws/pub/v/affise_attribution_module_tiktok)](https://pub.dev/packages/affise_attribution_module_tiktok) | ✅ | ✅ |
+
+
+Run console command
+
+```console
+flutter pub add affise_attribution_lib
+
+flutter pub add affise_attribution_module_adservice
+flutter pub add affise_attribution_module_advertising
+flutter pub add affise_attribution_module_androidid
+flutter pub add affise_attribution_module_appsflyer
+flutter pub add affise_attribution_module_google
+flutter pub add affise_attribution_module_huawei
+flutter pub add affise_attribution_module_link
+flutter pub add affise_attribution_module_meta
+flutter pub add affise_attribution_module_network
+flutter pub add affise_attribution_module_persistent
+flutter pub add affise_attribution_module_phone
+flutter pub add affise_attribution_module_rustore
+flutter pub add affise_attribution_module_status
+flutter pub add affise_attribution_module_subscription
+flutter pub add affise_attribution_module_tiktok
+```
+
+or add dependency to `pubspec.yaml` in your flutter application
+
+```yaml
+dependencies:
+  affise_attribution_lib: ^1.7.15
+  affise_attribution_module_adservice: ^1.7.15
+  affise_attribution_module_advertising: ^1.7.15
+  affise_attribution_module_androidid: ^1.7.15
+  affise_attribution_module_appsflyer: ^1.7.15
+  affise_attribution_module_google: ^1.7.15
+  affise_attribution_module_huawei: ^1.7.15
+  affise_attribution_module_link: ^1.7.15
+  affise_attribution_module_meta: ^1.7.15
+  affise_attribution_module_network: ^1.7.15
+  affise_attribution_module_persistent: ^1.7.15
+  affise_attribution_module_phone: ^1.7.15
+  affise_attribution_module_rustore: ^1.7.15
+  affise_attribution_module_status: ^1.7.15
+  affise_attribution_module_subscription: ^1.7.15
+  affise_attribution_module_tiktok: ^1.7.15
+```
+
+#### Native
+
+##### Android
 
 Add modules to android project
 
@@ -294,7 +378,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.7.14'
+final affise_version = '1.7.15'
 
 dependencies {
     // Affise modules
@@ -313,7 +397,7 @@ dependencies {
 }
 ```
 
-#### iOS
+##### iOS
 
 Add modules to iOS project
 
@@ -335,7 +419,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.7.14'
+  affise_version = '1.7.15'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules

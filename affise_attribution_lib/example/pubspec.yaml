@@ -1,5 +1,5 @@
 name: affise_attribution_lib_example
-version: 1.7.14
+version: 1.7.15
 description: Demonstrates how to use the affise_attribution_lib plugin.
 
 # The following line prevents the package from being accidentally published to
@@ -22,13 +22,52 @@ dependencies:
   affise_attribution_lib:
     # When depending on this package from a real application you should use:
     #   affise_attribution_lib: ^x.y.z
-    # See https://dart.dev/tools/pub/dependencies#version-constraints
-    # The example app is bundled with the plugin so we use a path dependency on
-    # the parent directory to use the current plugin's version.
     path: ../
+
+  affise_attribution_module_adservice:
+    path: ../../affise_attribution_module_adservice
 
   affise_attribution_module_advertising:
     path: ../../affise_attribution_module_advertising
+
+  affise_attribution_module_androidid:
+    path: ../../affise_attribution_module_androidid
+
+  affise_attribution_module_appsflyer:
+    path: ../../affise_attribution_module_appsflyer
+
+  affise_attribution_module_google:
+    path: ../../affise_attribution_module_google
+
+  affise_attribution_module_huawei:
+    path: ../../affise_attribution_module_huawei
+
+  affise_attribution_module_link:
+    path: ../../affise_attribution_module_link
+
+  affise_attribution_module_meta:
+    path: ../../affise_attribution_module_meta
+
+  affise_attribution_module_network:
+    path: ../../affise_attribution_module_network
+
+  affise_attribution_module_persistent:
+    path: ../../affise_attribution_module_persistent
+
+  affise_attribution_module_phone:
+    path: ../../affise_attribution_module_phone
+
+  affise_attribution_module_rustore:
+    path: ../../affise_attribution_module_rustore
+
+  affise_attribution_module_status:
+    path: ../../affise_attribution_module_status
+
+  affise_attribution_module_subscription:
+    path: ../../affise_attribution_module_subscription
+
+  affise_attribution_module_tiktok:
+    path: ../../affise_attribution_module_tiktok
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

@@ -1,0 +1,29 @@
+name: affise_attribution_module_phone_example
+description: Demonstrates how to use the affise_attribution_module_phone plugin.
+publish_to: 'none'
+version: 1.7.15
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  affise_attribution_module_phone:
+    path: ../
+
+  affise_attribution_lib:
+    path: ../../affise_attribution_lib
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  integration_test:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

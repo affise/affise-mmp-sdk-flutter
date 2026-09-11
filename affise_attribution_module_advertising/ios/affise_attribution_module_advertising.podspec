@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'affise_attribution_module_advertising'
-  s.version          = '1.7.14'
+  s.version          = '1.7.15'
   s.summary          = 'Affise Attribution Advertising Module Flutter wrapper.'
   s.description      = <<-DESC
 Affise Attribution Advertising Module Flutter wrapper.
@@ -26,5 +26,5 @@ Affise Attribution Advertising Module Flutter wrapper.
   # plugin's privacy impact, and then uncomment this line. For more information,
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
   # s.resource_bundles = {'affise_attribution_module_advertising_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
-  s.dependency 'AffiseModule/Advertising', '1.7.14'
+  s.dependency 'AffiseModule/Advertising', s.version
 end

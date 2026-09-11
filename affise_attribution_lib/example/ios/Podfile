@@ -34,14 +34,15 @@ target 'Runner' do
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 
-  affise_version = '1.7.14'
-  # Affise modules
-  pod 'AffiseModule/AppsFlyer', affise_version
-  pod 'AffiseModule/Status', affise_version
-  pod 'AffiseModule/Persistent', affise_version
-  pod 'AffiseModule/Link', affise_version
-  pod 'AffiseModule/Subscription', affise_version
-  pod 'AffiseModule/TikTok', affise_version
+  # # Manual dependencies. Use Flutter dependencies
+  # affise_version = '1.7.15'
+  # # Affise modules
+  # pod 'AffiseModule/AppsFlyer', affise_version
+  # pod 'AffiseModule/Status', affise_version
+  # pod 'AffiseModule/Persistent', affise_version
+  # pod 'AffiseModule/Link', affise_version
+  # pod 'AffiseModule/Subscription', affise_version
+  # pod 'AffiseModule/TikTok', affise_version
 end
 
 post_install do |installer|
