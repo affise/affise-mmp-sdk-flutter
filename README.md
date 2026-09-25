@@ -157,7 +157,7 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.15
+  affise_attribution_lib: ^1.7.16
 ```
 
 ### Integrate as git dependency
@@ -336,22 +336,22 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.15
-  affise_attribution_module_adservice: ^1.7.15
-  affise_attribution_module_advertising: ^1.7.15
-  affise_attribution_module_androidid: ^1.7.15
-  affise_attribution_module_appsflyer: ^1.7.15
-  affise_attribution_module_google: ^1.7.15
-  affise_attribution_module_huawei: ^1.7.15
-  affise_attribution_module_link: ^1.7.15
-  affise_attribution_module_meta: ^1.7.15
-  affise_attribution_module_network: ^1.7.15
-  affise_attribution_module_persistent: ^1.7.15
-  affise_attribution_module_phone: ^1.7.15
-  affise_attribution_module_rustore: ^1.7.15
-  affise_attribution_module_status: ^1.7.15
-  affise_attribution_module_subscription: ^1.7.15
-  affise_attribution_module_tiktok: ^1.7.15
+  affise_attribution_lib: ^1.7.16
+  affise_attribution_module_adservice: ^1.7.16
+  affise_attribution_module_advertising: ^1.7.16
+  affise_attribution_module_androidid: ^1.7.16
+  affise_attribution_module_appsflyer: ^1.7.16
+  affise_attribution_module_google: ^1.7.16
+  affise_attribution_module_huawei: ^1.7.16
+  affise_attribution_module_link: ^1.7.16
+  affise_attribution_module_meta: ^1.7.16
+  affise_attribution_module_network: ^1.7.16
+  affise_attribution_module_persistent: ^1.7.16
+  affise_attribution_module_phone: ^1.7.16
+  affise_attribution_module_rustore: ^1.7.16
+  affise_attribution_module_status: ^1.7.16
+  affise_attribution_module_subscription: ^1.7.16
+  affise_attribution_module_tiktok: ^1.7.16
 ```
 
 #### Native
@@ -378,7 +378,7 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.7.15'
+final affise_version = '1.7.16'
 
 dependencies {
     // Affise modules
@@ -419,7 +419,7 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.7.15'
+  affise_version = '1.7.16'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules

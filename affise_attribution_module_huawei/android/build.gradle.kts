@@ -1,5 +1,5 @@
 group = "com.affise.affise_attribution_module_huawei"
-version = "1.7.15"
+version = "1.7.16"
 
 buildscript {
     val kotlinVersion = "2.2.20"
@@ -72,7 +72,7 @@ android {
 }
 
 dependencies {
-    implementation("com.affise:module-huawei:1.7.15")
+    implementation("com.affise:module-huawei:1.7.16")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.mockito:mockito-core:5.0.0")

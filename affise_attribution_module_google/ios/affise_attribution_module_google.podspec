@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'affise_attribution_module_google'
-  s.version          = '1.7.15'
+  s.version          = '1.7.16'
   s.summary          = 'Affise Attribution Google Module Flutter wrapper.'
   s.description      = <<-DESC
 Affise Attribution Google Module Flutter wrapper.

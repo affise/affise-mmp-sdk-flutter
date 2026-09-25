@@ -19,8 +19,8 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.15
-  affise_attribution_module_subscription: ^1.7.15
+  affise_attribution_lib: ^1.7.16
+  affise_attribution_module_subscription: ^1.7.16
 ```
 
 ## Native Dependencies
@@ -28,17 +28,17 @@ dependencies:
 Android:
 
 ```kotlin
-com.affise:module-subscription:1.7.15
+com.affise:module-subscription:1.7.16
 ```
 
 iOS:
 
 ```ruby
-AffiseModule/Subscription 1.7.15
+AffiseModule/Subscription 1.7.16
 ```
 
 Swift Package Manager:
 
 ```swift
-AffiseModuleSubscription 1.7.15
+AffiseModuleSubscription 1.7.16
 ```

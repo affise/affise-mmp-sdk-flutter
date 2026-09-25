@@ -7,14 +7,14 @@ packages:
       path: "../../affise_attribution_lib"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_androidid:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   async:
     dependency: transitive
     description:

@@ -43,7 +43,7 @@ flutter {
 
 dependencies {
     // // Manual dependencies. Use Flutter dependencies
-    // val affise_version = "1.7.15"
+    // val affise_version = "1.7.16"
 
     // // Affise modules
     // implementation("com.affise:module-androidid:$affise_version")

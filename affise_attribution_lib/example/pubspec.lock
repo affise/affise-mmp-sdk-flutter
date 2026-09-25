@@ -7,112 +7,112 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_adservice:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_adservice"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_advertising:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_advertising"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_androidid:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_androidid"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_appsflyer:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_appsflyer"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_google:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_google"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_huawei:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_huawei"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_link:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_link"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_meta:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_meta"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_network:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_network"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_persistent:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_persistent"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_phone:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_phone"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_rustore:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_rustore"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_status:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_status"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_subscription:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_subscription"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   affise_attribution_module_tiktok:
     dependency: "direct main"
     description:
       path: "../../affise_attribution_module_tiktok"
       relative: true
     source: path
-    version: "1.7.15"
+    version: "1.7.16"
   async:
     dependency: transitive
     description:

@@ -19,8 +19,8 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.15
-  affise_attribution_module_meta: ^1.7.15
+  affise_attribution_lib: ^1.7.16
+  affise_attribution_module_meta: ^1.7.16
 ```
 
 ## Native Dependencies
@@ -28,5 +28,5 @@ dependencies:
 Android:
 
 ```kotlin
-com.affise:module-meta:1.7.15
+com.affise:module-meta:1.7.16
 ```

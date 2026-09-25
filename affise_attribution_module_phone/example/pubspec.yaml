@@ -1,7 +1,7 @@
 name: affise_attribution_module_phone_example
 description: Demonstrates how to use the affise_attribution_module_phone plugin.
 publish_to: 'none'
-version: 1.7.15
+version: 1.7.16
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
