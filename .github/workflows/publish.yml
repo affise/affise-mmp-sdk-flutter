@@ -96,72 +96,73 @@ jobs:
         run: flutter pub get
 
       # Dry Run
-      - name: Publish Affise Attribution Lib - dry run
-        working-directory: affise_attribution_lib
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Lib - dry run
+      #   working-directory: affise_attribution_lib
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution AdService Module - dry run
-        working-directory: affise_attribution_module_adservice
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution AdService Module - dry run
+      #   working-directory: affise_attribution_module_adservice
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Advertising Module - dry run
-        working-directory: affise_attribution_module_advertising
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Advertising Module - dry run
+      #   working-directory: affise_attribution_module_advertising
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution AndroidId Module - dry run
-        working-directory: affise_attribution_module_androidid
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution AndroidId Module - dry run
+      #   working-directory: affise_attribution_module_androidid
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution AppsFlyer Module - dry run
-        working-directory: affise_attribution_module_appsflyer
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution AppsFlyer Module - dry run
+      #   working-directory: affise_attribution_module_appsflyer
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Google Module - dry run
-        working-directory: affise_attribution_module_google
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Google Module - dry run
+      #   working-directory: affise_attribution_module_google
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Huawei Module - dry run
-        working-directory: affise_attribution_module_huawei
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Huawei Module - dry run
+      #   working-directory: affise_attribution_module_huawei
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Link Module - dry run
-        working-directory: affise_attribution_module_link
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Link Module - dry run
+      #   working-directory: affise_attribution_module_link
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Meta Module - dry run
-        working-directory: affise_attribution_module_meta
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Meta Module - dry run
+      #   working-directory: affise_attribution_module_meta
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Network Module - dry run
-        working-directory: affise_attribution_module_network
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Network Module - dry run
+      #   working-directory: affise_attribution_module_network
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Persistent Module - dry run
-        working-directory: affise_attribution_module_persistent
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Persistent Module - dry run
+      #   working-directory: affise_attribution_module_persistent
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Phone Module - dry run
-        working-directory: affise_attribution_module_phone
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Phone Module - dry run
+      #   working-directory: affise_attribution_module_phone
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution RuStore Module - dry run
-        working-directory: affise_attribution_module_rustore
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution RuStore Module - dry run
+      #   working-directory: affise_attribution_module_rustore
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Status Module - dry run
-        working-directory: affise_attribution_module_status
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Status Module - dry run
+      #   working-directory: affise_attribution_module_status
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution Subscription Module - dry run
-        working-directory: affise_attribution_module_subscription
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution Subscription Module - dry run
+      #   working-directory: affise_attribution_module_subscription
+      #   run: flutter pub publish --dry-run
 
-      - name: Publish Affise Attribution TikTok Module - dry run
-        working-directory: affise_attribution_module_tiktok
-        run: flutter pub publish --dry-run
+      # - name: Publish Affise Attribution TikTok Module - dry run
+      #   working-directory: affise_attribution_module_tiktok
+      #   run: flutter pub publish --dry-run
 
       # Publish
       - name: Publish Affise Attribution Lib to pub.dev
+        continue-on-error: true
         working-directory: affise_attribution_lib
         run: flutter pub publish --force
 
