@@ -169,6 +169,7 @@ dependencies:
   affise_attribution_lib:
     git:
       url: https://github.com/affise/affise-mmp-sdk-flutter
+      path: affise_attribution_lib
 ```
 
 ### Initialize
