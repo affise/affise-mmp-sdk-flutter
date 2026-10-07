@@ -249,7 +249,6 @@ Affise
 
 #### Android
 
-Minimal Android SDK version is 21
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```groovy
@@ -291,6 +290,8 @@ Example [`info.plist`](example/ios/Runner/Info.plist):
 ### Modules
 
 #### Flutter
+
+`Recommended installation option`
 
 | Package                                      | Version | Android | iOS |
 |----------------------------------------------|:-------:|:-------:|:---:|
@@ -356,6 +357,8 @@ dependencies:
 ```
 
 #### Native
+
+It is better to use the [recommended dependency installation](#flutter) method
 
 ##### Android
 
