@@ -7,14 +7,14 @@ packages:
       path: "../../affise_attribution_lib"
       relative: true
     source: path
-    version: "1.7.16"
+    version: "1.7.17"
   affise_attribution_module_status:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "1.7.16"
+    version: "1.7.17"
   async:
     dependency: transitive
     description:

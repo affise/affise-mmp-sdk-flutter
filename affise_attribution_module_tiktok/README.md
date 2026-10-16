@@ -19,8 +19,8 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.16
-  affise_attribution_module_tiktok: ^1.7.16
+  affise_attribution_lib: ^1.7.17
+  affise_attribution_module_tiktok: ^1.7.17
 ```
 
 ## Native Dependencies
@@ -28,17 +28,17 @@ dependencies:
 Android:
 
 ```kotlin
-com.affise:module-tiktok:1.7.16
+com.affise:module-tiktok:1.7.17
 ```
 
 iOS:
 
 ```ruby
-AffiseModule/TikTok 1.7.16
+AffiseModule/TikTok 1.7.17
 ```
 
 Swift Package Manager:
 
 ```swift
-AffiseModuleTikTok 1.7.16
+AffiseModuleTikTok 1.7.17
 ```
