@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'affise_attribution_module_persistent'
-  s.version          = '1.7.17'
+  s.version          = '1.7.18'
   s.summary          = 'Affise Attribution Persistent Module Flutter wrapper.'
   s.description      = <<-DESC
 Affise Attribution Persistent Module Flutter wrapper.

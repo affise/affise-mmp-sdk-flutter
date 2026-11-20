@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.7.18] - 2026-11-23
+
+### Changed
+
+- Update native iOS to [`1.7.18`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.18/CHANGELOG.md)
+
 ## [1.7.17] - 2026-10-16
 
 ### Changed
@@ -23,6 +29,7 @@
 
 - Update native iOS to [`1.7.15`](https://github.com/affise/affise-mmp-sdk-ios/blob/1.7.15/CHANGELOG.md)
 
+[1.7.18]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.17...1.7.18
 [1.7.17]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.16...1.7.17
 [1.7.16]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.15...1.7.16
 [1.7.15]: https://github.com/affise/affise-mmp-sdk-flutter/compare/1.7.14...1.7.15

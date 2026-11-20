@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'affise_attribution_module_appsflyer'
-  s.version          = '1.7.17'
+  s.version          = '1.7.18'
   s.summary          = 'Affise Attribution AppsFlyer Module Flutter wrapper.'
   s.description      = <<-DESC
 Affise Attribution AppsFlyer Module Flutter wrapper.

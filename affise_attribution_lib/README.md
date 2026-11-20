@@ -157,7 +157,7 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.17
+  affise_attribution_lib: ^1.7.18
 ```
 
 ### Integrate as git dependency
@@ -338,22 +338,22 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.17
-  affise_attribution_module_adservice: ^1.7.17
-  affise_attribution_module_advertising: ^1.7.17
-  affise_attribution_module_androidid: ^1.7.17
-  affise_attribution_module_appsflyer: ^1.7.17
-  affise_attribution_module_google: ^1.7.17
-  affise_attribution_module_huawei: ^1.7.17
-  affise_attribution_module_link: ^1.7.17
-  affise_attribution_module_meta: ^1.7.17
-  affise_attribution_module_network: ^1.7.17
-  affise_attribution_module_persistent: ^1.7.17
-  affise_attribution_module_phone: ^1.7.17
-  affise_attribution_module_rustore: ^1.7.17
-  affise_attribution_module_status: ^1.7.17
-  affise_attribution_module_subscription: ^1.7.17
-  affise_attribution_module_tiktok: ^1.7.17
+  affise_attribution_lib: ^1.7.18
+  affise_attribution_module_adservice: ^1.7.18
+  affise_attribution_module_advertising: ^1.7.18
+  affise_attribution_module_androidid: ^1.7.18
+  affise_attribution_module_appsflyer: ^1.7.18
+  affise_attribution_module_google: ^1.7.18
+  affise_attribution_module_huawei: ^1.7.18
+  affise_attribution_module_link: ^1.7.18
+  affise_attribution_module_meta: ^1.7.18
+  affise_attribution_module_network: ^1.7.18
+  affise_attribution_module_persistent: ^1.7.18
+  affise_attribution_module_phone: ^1.7.18
+  affise_attribution_module_rustore: ^1.7.18
+  affise_attribution_module_status: ^1.7.18
+  affise_attribution_module_subscription: ^1.7.18
+  affise_attribution_module_tiktok: ^1.7.18
 ```
 
 #### Native
@@ -369,6 +369,7 @@ Add modules to android project
 | `ADVERTISING`  | [![module-advertising](https://img.shields.io/maven-central/v/com.affise/module-advertising?label=latest)](https://mvnrepository.com/artifact/com.affise/module-advertising) |
 | `ANDROIDID`    | [![module-androidid](https://img.shields.io/maven-central/v/com.affise/module-androidid?label=latest)](https://mvnrepository.com/artifact/com.affise/module-androidid)       |
 | `APPSFLYER`    | [![module-appsflyer](https://img.shields.io/maven-central/v/com.affise/module-appsflyer?label=latest)](https://mvnrepository.com/artifact/com.affise/module-appsflyer)       |
+| `HARDWARE`     | [![module-hardware](https://img.shields.io/maven-central/v/com.affise/module-hardware?label=latest)](https://mvnrepository.com/artifact/com.affise/module-hardware)          |
 | `LINK`         | [![module-link](https://img.shields.io/maven-central/v/com.affise/module-link?label=latest)](https://mvnrepository.com/artifact/com.affise/module-link)                      |
 | `NETWORK`      | [![module-network](https://img.shields.io/maven-central/v/com.affise/module-network?label=latest)](https://mvnrepository.com/artifact/com.affise/module-network)             |
 | `PHONE`        | [![module-phone](https://img.shields.io/maven-central/v/com.affise/module-phone?label=latest)](https://mvnrepository.com/artifact/com.affise/module-phone)                   |
@@ -382,12 +383,13 @@ Add modules to android project
 Example [`example/android/app/build.gradle`](example/android/app/build.gradle)
 
 ```gradle
-final affise_version = '1.7.17'
+final affise_version = '1.7.18'
 
 dependencies {
     // Affise modules
     implementation "com.affise:module-advertising:$affise_version"
     implementation "com.affise:module-androidid:$affise_version"
+    implementation "com.affise:module-hardware:$affise_version"
     implementation "com.affise:module-link:$affise_version"
     implementation "com.affise:module-network:$affise_version"
     implementation "com.affise:module-phone:$affise_version"
@@ -411,6 +413,7 @@ Add modules to iOS project
 | `ADVERTISING`  | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `APPSFLYER`    | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `GOOGLE`       | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
+| `HARDWARE`     | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `LINK`         | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `PERSISTENT`   | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
 | `STATUS`       | [![latest](https://badges.ws/cocoapods/v/AffiseModule)](https://github.com/CocoaPods/Specs/tree/master/Specs/0/3/d/AffiseModule/) |
@@ -423,12 +426,13 @@ Example [example/ios/Podfile](example/ios/Podfile)
 target 'Runner' do
   # ...
   
-  affise_version = '1.7.17'
+  affise_version = '1.7.18'
   # All Affise Modules
   pod 'AffiseModule', affise_version
   # Or only specific Modules
   pod 'AffiseModule/AdService', affise_version
   pod 'AffiseModule/Advertising', affise_version
+  pod 'AffiseModule/Hardware', affise_version
   pod 'AffiseModule/Link', affise_version
   pod 'AffiseModule/Persistent', affise_version
   pod 'AffiseModule/Status', affise_version

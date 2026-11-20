@@ -19,8 +19,8 @@ or add dependency to `pubspec.yaml` in your flutter application
 
 ```yaml
 dependencies:
-  affise_attribution_lib: ^1.7.17
-  affise_attribution_module_google: ^1.7.17
+  affise_attribution_lib: ^1.7.18
+  affise_attribution_module_google: ^1.7.18
 ```
 
 ## Native Dependencies
@@ -28,11 +28,11 @@ dependencies:
 iOS:
 
 ```ruby
-AffiseModule/Google 1.7.17
+AffiseModule/Google 1.7.18
 ```
 
 Swift Package Manager:
 
 ```swift
-AffiseModuleGoogle 1.7.17
+AffiseModuleGoogle 1.7.18
 ```
